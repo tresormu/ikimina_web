@@ -29,6 +29,11 @@ import Earnings from './pages/treasurer/Earnings';
 import Profits from './pages/treasurer/Profits';
 import TreasurerProfile from './pages/treasurer/TreasurerProfile';
 import MemberDetail from './pages/treasurer/MemberDetail';
+import MemberOnboarding from './pages/treasurer/MemberOnboarding';
+import PenaltyManagement from './pages/treasurer/PenaltyManagement';
+import LoanManagement from './pages/treasurer/LoanManagement';
+import USSDSimulator from './pages/treasurer/USSDSimulator';
+import MemberJoin from './pages/auth/MemberJoin';
 
 import LenderDashboard from './pages/lender/LenderDashboard';
 import LenderLogin from './pages/lender/LenderLogin';
@@ -84,6 +89,7 @@ function AppContent() {
 
         <Route path="/login" element={<AuthLayout><Login /></AuthLayout>} />
         <Route path="/register" element={<AuthLayout><Register /></AuthLayout>} />
+        <Route path="/join" element={<MemberJoin />} />
         <Route path="/lender/login" element={<AuthLayout><LenderLogin /></AuthLayout>} />
         <Route path="/admin/login" element={<AuthLayout><AdminLogin /></AuthLayout>} />
 
@@ -92,6 +98,7 @@ function AppContent() {
 
           <Route path="treasurer" element={<ProtectedRoute allowedRoles={['treasurer', 'admin']}><TreasurerDashboard /></ProtectedRoute>} />
           <Route path="treasurer/profile" element={<ProtectedRoute allowedRoles={['treasurer', 'admin']}><TreasurerProfile /></ProtectedRoute>} />
+          <Route path="treasurer/onboarding" element={<ProtectedRoute allowedRoles={['treasurer', 'admin']}><MemberOnboarding /></ProtectedRoute>} />
           <Route path="treasurer/members" element={<ProtectedRoute allowedRoles={['treasurer', 'admin']}><MemberManagement /></ProtectedRoute>} />
           <Route path="treasurer/members/:id" element={<ProtectedRoute allowedRoles={['treasurer', 'admin']}><MemberDetail /></ProtectedRoute>} />
           <Route path="treasurer/contributions" element={<ProtectedRoute allowedRoles={['treasurer', 'admin']}><ContributionTracker /></ProtectedRoute>} />
@@ -99,6 +106,9 @@ function AppContent() {
           <Route path="treasurer/disputes" element={<ProtectedRoute allowedRoles={['treasurer', 'admin']}><DisputeManagement /></ProtectedRoute>} />
           <Route path="treasurer/earnings" element={<ProtectedRoute allowedRoles={['treasurer', 'admin']}><Earnings /></ProtectedRoute>} />
           <Route path="treasurer/profits" element={<ProtectedRoute allowedRoles={['treasurer', 'admin']}><Profits /></ProtectedRoute>} />
+          <Route path="treasurer/penalties" element={<ProtectedRoute allowedRoles={['treasurer', 'admin']}><PenaltyManagement /></ProtectedRoute>} />
+          <Route path="treasurer/loans" element={<ProtectedRoute allowedRoles={['treasurer', 'admin']}><LoanManagement /></ProtectedRoute>} />
+          <Route path="treasurer/ussd" element={<ProtectedRoute allowedRoles={['treasurer', 'admin']}><USSDSimulator /></ProtectedRoute>} />
 
           <Route path="lender" element={<ProtectedRoute allowedRoles={['lender', 'admin']}><LenderDashboard /></ProtectedRoute>} />
           <Route path="lender/credit-reports" element={<ProtectedRoute allowedRoles={['lender', 'admin']}><CreditReportSearch /></ProtectedRoute>} />

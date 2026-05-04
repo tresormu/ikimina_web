@@ -44,6 +44,11 @@ const TreasurerNavigation: React.FC<TreasurerNavigationProps> = ({
       icon: Users,
     },
     {
+      name: 'Add Members',
+      href: '/treasurer/onboarding',
+      icon: Users,
+    },
+    {
       name: 'Members',
       href: '/treasurer/members',
       icon: Users,
@@ -52,6 +57,16 @@ const TreasurerNavigation: React.FC<TreasurerNavigationProps> = ({
       name: 'Contributions',
       href: '/treasurer/contributions',
       icon: DollarSign,
+    },
+    {
+      name: 'Loans',
+      href: '/treasurer/loans',
+      icon: CreditCard,
+    },
+    {
+      name: 'Penalties',
+      href: '/treasurer/penalties',
+      icon: AlertTriangle,
     },
     {
       name: 'Rotation',
@@ -67,6 +82,11 @@ const TreasurerNavigation: React.FC<TreasurerNavigationProps> = ({
       name: 'Profits',
       href: '/treasurer/profits',
       icon: CreditCard,
+    },
+    {
+      name: 'USSD Simulator',
+      href: '/treasurer/ussd',
+      icon: Home,
     },
   ];
 
