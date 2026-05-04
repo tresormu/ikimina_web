@@ -1,493 +1,282 @@
 import React, { useState } from 'react';
-import { Outlet } from 'react-router-dom';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../components/ui/Card';
-import { Button } from '../../components/ui/Button';
-import { Badge } from '../../components/ui/Badge';
-import { Search, Filter, PieChart } from 'lucide-react';
-import { AdminStatsCard } from '../../components/admin/AdminStatsCard';
-import { AdminTabNavigation } from '../../components/admin/AdminTabNavigation';
-import { GroupRow } from '../../components/admin/GroupRow';
-import { LenderRow } from '../../components/admin/LenderRow';
-import { DisputeRow } from '../../components/admin/DisputeRow';
+import { Users, TrendingUp, DollarSign, AlertTriangle, CheckCircle, XCircle, Clock, Eye, Ban, UserCheck, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-interface AdminStats {
-  totalGroups: number;
-  activeGroups: number;
-  totalLenders: number;
-  approvedLenders: number;
-  pendingLenders: number;
-  totalRevenue: number;
-  monthlyRevenue: number;
-  totalDisputes: number;
-  escalatedDisputes: number;
-  pendingApplications: number;
-}
+const stats = [
+  { label: 'Total Groups', value: '156', sub: '142 active', icon: <Users size={20} className="text-primary-600" />, bg: 'bg-primary-50' },
+  { label: 'Total Members', value: '3,240', sub: 'across all groups', icon: <Users size={20} className="text-blue-600" />, bg: 'bg-blue-50' },
+  { label: 'Platform Revenue', value: 'RWF 12.5M', sub: 'RWF 2.1M this month', icon: <DollarSign size={20} className="text-green-600" />, bg: 'bg-green-50' },
+  { label: 'Active Lenders', value: '24', sub: '4 pending approval', icon: <UserCheck size={20} className="text-violet-600" />, bg: 'bg-violet-50' },
+  { label: 'Open Disputes', value: '12', sub: '5 escalated', icon: <AlertTriangle size={20} className="text-red-600" />, bg: 'bg-red-50' },
+  { label: 'Credit Reports Sold', value: '847', sub: 'RWF 8.47M revenue', icon: <TrendingUp size={20} className="text-yellow-600" />, bg: 'bg-yellow-50' },
+];
 
-interface Group {
-  id: string;
-  name: string;
-  members: number;
-  status: 'active' | 'inactive' | 'suspended';
-  createdDate: string;
-  lastActivity: string;
-  treasurer: string;
-}
+const groups = [
+  { id: '1', name: 'Kigali Savings Group', members: 15, treasurer: 'Jean Mugisha', status: 'active', cycle: 3, week: 8, lastActivity: '20 Jan 2024' },
+  { id: '2', name: 'Nyabugogo Investment Club', members: 12, treasurer: 'Alice Uwimana', status: 'active', cycle: 2, week: 5, lastActivity: '19 Jan 2024' },
+  { id: '3', name: 'Remera Business Circle', members: 8, treasurer: 'Bob Niyonsaba', status: 'suspended', cycle: 1, week: 3, lastActivity: '15 Jan 2024' },
+  { id: '4', name: 'Kimironko Women Group', members: 20, treasurer: 'Grace Ingabire', status: 'active', cycle: 4, week: 2, lastActivity: '20 Jan 2024' },
+  { id: '5', name: 'Gisozi Youth Savers', members: 10, treasurer: 'Eric Bizimana', status: 'active', cycle: 1, week: 6, lastActivity: '18 Jan 2024' },
+];
 
-interface Lender {
-  id: string;
-  institutionName: string;
-  status: 'approved' | 'pending' | 'rejected' | 'suspended';
-  licenseNumber: string;
-  applicationDate: string;
-  approvedDate?: string;
-  reportsPurchased: number;
-  totalSpent: number;
-}
+const lenders = [
+  { id: '1', name: 'ABC Finance Ltd', license: 'FL2024001234', status: 'approved', reports: 47, spent: 470000, applied: '15 Jan 2024' },
+  { id: '2', name: 'Rwanda Credit Union', license: 'FL2024001567', status: 'pending', reports: 0, spent: 0, applied: '20 Jan 2024' },
+  { id: '3', name: 'Quick Loans Ltd', license: 'FL2024000987', status: 'rejected', reports: 0, spent: 0, applied: '10 Jan 2024' },
+  { id: '4', name: 'BPR Bank Rwanda', license: 'FL2024002100', status: 'approved', reports: 120, spent: 1200000, applied: '01 Dec 2023' },
+];
 
-interface Dispute {
-  id: string;
-  groupId: string;
-  groupName: string;
-  memberId: string;
-  memberName: string;
-  description: string;
-  status: 'open' | 'resolved' | 'escalated';
-  escalatedDate?: string;
-  createdDate: string;
-  priority: 'low' | 'medium' | 'high';
-}
+const disputes = [
+  { id: '1', group: 'Kigali Savings Group', member: 'Jean Mugisha', issue: 'Payment not recorded after MoMo confirmation', status: 'escalated', priority: 'high', date: '18 Jan 2024' },
+  { id: '2', group: 'Nyabugogo Investment Club', member: 'Alice Uwimana', issue: 'Rotation order dispute — member claims wrong position', status: 'open', priority: 'medium', date: '20 Jan 2024' },
+  { id: '3', group: 'Gisozi Youth Savers', member: 'Eric Bizimana', issue: 'Treasurer marked payment as missed despite MoMo receipt', status: 'escalated', priority: 'high', date: '17 Jan 2024' },
+];
+
+const recentActivity = [
+  { icon: <CheckCircle size={15} className="text-green-500" />, text: 'Kimironko Women Group completed Week 2 — 100% collection', time: '2 hours ago' },
+  { icon: <UserCheck size={15} className="text-blue-500" />, text: 'BPR Bank Rwanda purchased 5 credit reports', time: '4 hours ago' },
+  { icon: <AlertTriangle size={15} className="text-red-500" />, text: 'New dispute escalated from Kigali Savings Group', time: '6 hours ago' },
+  { icon: <Users size={15} className="text-primary-500" />, text: 'New group registered: Gisozi Youth Savers (10 members)', time: '1 day ago' },
+  { icon: <DollarSign size={15} className="text-green-500" />, text: 'Monthly revenue milestone: RWF 2.1M collected', time: '2 days ago' },
+];
+
+const monthlyRevenue = [
+  { month: 'Aug', amount: 1400000 },
+  { month: 'Sep', amount: 1600000 },
+  { month: 'Oct', amount: 1750000 },
+  { month: 'Nov', amount: 1900000 },
+  { month: 'Dec', amount: 2000000 },
+  { month: 'Jan', amount: 2100000 },
+];
+
+const statusStyle = (s: string) => {
+  if (s === 'active' || s === 'approved') return 'bg-green-100 text-green-700';
+  if (s === 'pending') return 'bg-yellow-100 text-yellow-700';
+  if (s === 'suspended' || s === 'rejected') return 'bg-red-100 text-red-700';
+  return 'bg-gray-100 text-gray-700';
+};
+
+const priorityStyle = (p: string) => {
+  if (p === 'high') return 'bg-red-100 text-red-700';
+  if (p === 'medium') return 'bg-yellow-100 text-yellow-700';
+  return 'bg-gray-100 text-gray-700';
+};
 
 const AdminDashboard: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'overview' | 'groups' | 'lenders' | 'disputes' | 'revenue'>('overview');
-  const [searchQuery, setSearchQuery] = useState('');
-
-  // Mock data
-  const [stats] = useState<AdminStats>({
-    totalGroups: 156,
-    activeGroups: 142,
-    totalLenders: 28,
-    approvedLenders: 24,
-    pendingLenders: 4,
-    totalRevenue: 12500000,
-    monthlyRevenue: 2100000,
-    totalDisputes: 47,
-    escalatedDisputes: 12,
-    pendingApplications: 4
-  });
-
-  const [groups] = useState<Group[]>([
-    {
-      id: '1',
-      name: 'Kigali Savings Group',
-      members: 15,
-      status: 'active',
-      createdDate: '2022-03-15',
-      lastActivity: '2024-01-20',
-      treasurer: 'Jean Mugisha'
-    },
-    {
-      id: '2',
-      name: 'Nyabugogo Investment Club',
-      members: 12,
-      status: 'active',
-      createdDate: '2022-06-20',
-      lastActivity: '2024-01-19',
-      treasurer: 'Alice Uwimana'
-    },
-    {
-      id: '3',
-      name: 'Remera Business Circle',
-      members: 8,
-      status: 'suspended',
-      createdDate: '2023-01-10',
-      lastActivity: '2024-01-15',
-      treasurer: 'Bob Niyonsaba'
-    }
-  ]);
-
-  const [lenders] = useState<Lender[]>([
-    {
-      id: '1',
-      institutionName: 'ABC Finance Ltd',
-      status: 'approved',
-      licenseNumber: 'FL2024001234',
-      applicationDate: '2024-01-15',
-      approvedDate: '2024-01-17',
-      reportsPurchased: 47,
-      totalSpent: 470000
-    },
-    {
-      id: '2',
-      institutionName: 'Rwanda Credit Union',
-      status: 'pending',
-      licenseNumber: 'FL2024001567',
-      applicationDate: '2024-01-20',
-      reportsPurchased: 0,
-      totalSpent: 0
-    },
-    {
-      id: '3',
-      institutionName: 'Quick Loans Ltd',
-      status: 'rejected',
-      licenseNumber: 'FL2024000987',
-      applicationDate: '2024-01-10',
-      reportsPurchased: 0,
-      totalSpent: 0
-    }
-  ]);
-
-  const [disputes] = useState<Dispute[]>([
-    {
-      id: '1',
-      groupId: '1',
-      groupName: 'Kigali Savings Group',
-      memberId: '1',
-      memberName: 'Jean Mugisha',
-      description: 'Dispute over contribution payment for week 8',
-      status: 'escalated',
-      escalatedDate: '2024-01-19',
-      createdDate: '2024-01-18',
-      priority: 'high'
-    },
-    {
-      id: '2',
-      groupId: '2',
-      groupName: 'Nyabugogo Investment Club',
-      memberId: '2',
-      memberName: 'Alice Uwimana',
-      description: 'Missing rotation payment',
-      status: 'open',
-      createdDate: '2024-01-20',
-      priority: 'medium'
-    }
-  ]);
-
-
-  const handleSuspendGroup = (groupId: string) => {
-    alert(`Suspending group ${groupId}`);
-  };
-
-  const handleApproveLender = (lenderId: string) => {
-    alert(`Approving lender ${lenderId}`);
-  };
-
-  const handleRejectLender = (lenderId: string) => {
-    alert(`Rejecting lender ${lenderId}`);
-  };
-
-  const handleResolveDispute = (disputeId: string) => {
-    alert(`Resolving dispute ${disputeId}`);
-  };
+  const [tab, setTab] = useState<'overview' | 'groups' | 'lenders' | 'disputes'>('overview');
+  const maxRevenue = Math.max(...monthlyRevenue.map(d => d.amount));
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 p-4 lg:p-6">
       {/* Header */}
-      <div>
-        <h1 className="text-3xl font-bold text-gray-900">Platform Admin Dashboard</h1>
-        <p className="mt-2 text-gray-600">
-          Manage groups, lenders, disputes, and platform revenue
-        </p>
+      <div className="flex items-center justify-between flex-wrap gap-4">
+        <div>
+          <h1 className="text-2xl font-black text-gray-900">Admin Dashboard</h1>
+          <p className="text-gray-500 mt-1">Full platform overview — groups, lenders, disputes, and revenue</p>
+        </div>
+        <Link
+          to="/admin/profits"
+          className="inline-flex items-center gap-2 rounded-xl bg-primary-500 px-4 py-2.5 text-sm font-bold text-white hover:bg-primary-600"
+        >
+          <DollarSign size={16} /> View Platform Profits
+        </Link>
       </div>
 
-      {/* Overview Stats */}
-      {activeTab === 'overview' && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <AdminStatsCard
-            type="groups"
-            value={stats.totalGroups}
-            subtitle={`${stats.activeGroups} active`}
-          />
-          <AdminStatsCard
-            type="lenders"
-            value={stats.totalLenders}
-            subtitle={`${stats.approvedLenders} approved`}
-          />
-          <AdminStatsCard
-            type="revenue"
-            value={`RWF ${stats.totalRevenue.toLocaleString()}`}
-            subtitle={`RWF ${stats.monthlyRevenue.toLocaleString()} this month`}
-          />
-          <AdminStatsCard
-            type="disputes"
-            value={stats.totalDisputes}
-            subtitle={`${stats.escalatedDisputes} escalated`}
-          />
+      {/* Stats grid */}
+      <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
+        {stats.map((s) => (
+          <div key={s.label} className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+            <div className={`flex h-10 w-10 items-center justify-center rounded-xl ${s.bg}`}>{s.icon}</div>
+            <p className="mt-3 text-2xl font-black text-gray-900">{s.value}</p>
+            <p className="text-sm font-semibold text-gray-700">{s.label}</p>
+            <p className="text-xs text-gray-400 mt-0.5">{s.sub}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* Revenue chart + Recent activity */}
+      <div className="grid gap-6 lg:grid-cols-2">
+        <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+          <p className="font-bold text-gray-900">Monthly Revenue — Last 6 Months</p>
+          <p className="text-sm text-gray-500 mt-0.5">Platform income from subscriptions and credit reports</p>
+          <div className="mt-6 flex items-end gap-3 h-32">
+            {monthlyRevenue.map((d) => {
+              const h = Math.round((d.amount / maxRevenue) * 112);
+              return (
+                <div key={d.month} className="flex-1 flex flex-col items-center gap-1">
+                  <div className="w-full rounded-t-lg bg-primary-500 hover:bg-primary-600 transition-colors cursor-pointer" style={{ height: h }} title={`RWF ${d.amount.toLocaleString()}`} />
+                  <span className="text-xs text-gray-500">{d.month}</span>
+                </div>
+              );
+            })}
+          </div>
+          <div className="mt-3 flex items-center justify-between text-xs text-gray-400">
+            <span>RWF 1.4M</span>
+            <span className="text-green-600 font-semibold">↑ 50% growth in 6 months</span>
+            <span>RWF 2.1M</span>
+          </div>
+        </div>
+
+        <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+          <p className="font-bold text-gray-900 mb-4">Recent Platform Activity</p>
+          <div className="space-y-3">
+            {recentActivity.map((a, i) => (
+              <div key={i} className="flex items-start gap-3 rounded-xl border border-gray-100 p-3">
+                <div className="mt-0.5">{a.icon}</div>
+                <div>
+                  <p className="text-sm text-gray-800">{a.text}</p>
+                  <p className="text-xs text-gray-400 mt-0.5">{a.time}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Tabs */}
+      <div className="flex gap-1 rounded-xl border border-gray-200 bg-gray-50 p-1 w-fit">
+        {(['overview', 'groups', 'lenders', 'disputes'] as const).map((t) => (
+          <button
+            key={t}
+            onClick={() => setTab(t)}
+            className={`rounded-lg px-4 py-2 text-sm font-semibold capitalize transition-colors ${tab === t ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'}`}
+          >
+            {t}
+          </button>
+        ))}
+      </div>
+
+      {/* Overview tab */}
+      {tab === 'overview' && (
+        <div className="grid gap-4 sm:grid-cols-3">
+          {[
+            { label: 'Groups needing attention', value: '3', desc: '2 with low collection rate, 1 suspended', color: 'border-red-200 bg-red-50', textColor: 'text-red-700' },
+            { label: 'Lenders awaiting approval', value: '4', desc: 'Applications submitted in last 7 days', color: 'border-yellow-200 bg-yellow-50', textColor: 'text-yellow-700' },
+            { label: 'Disputes to resolve', value: '5', desc: '3 escalated, 2 open for over 48 hours', color: 'border-orange-200 bg-orange-50', textColor: 'text-orange-700' },
+          ].map((item) => (
+            <div key={item.label} className={`rounded-2xl border p-5 ${item.color}`}>
+              <p className={`text-3xl font-black ${item.textColor}`}>{item.value}</p>
+              <p className={`text-sm font-bold mt-1 ${item.textColor}`}>{item.label}</p>
+              <p className="text-xs text-gray-600 mt-1">{item.desc}</p>
+            </div>
+          ))}
         </div>
       )}
 
-      {/* Navigation Tabs */}
-      <AdminTabNavigation 
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
-      />
-
-      {/* Groups Tab */}
-      {activeTab === 'groups' && (
-        <Card>
-          <CardHeader>
-            <div className="flex items-center justify-between">
-              <div>
-                <CardTitle>Registered Groups</CardTitle>
-                <CardDescription>
-                  Manage all savings groups on the platform
-                </CardDescription>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-                  <input
-                    type="text"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Search groups..."
-                    className="pl-10 border border-gray-300 rounded-md px-3 py-2 text-sm"
-                  />
-                </div>
-                <Button variant="outline" size="sm">
-                  <Filter className="h-4 w-4 mr-1" />
-                  Filter
-                </Button>
-              </div>
-            </div>
-          </CardHeader>
-          <CardContent>
-            <div className="overflow-x-auto">
-              <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Group Name
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Members
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Treasurer
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Status
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Created
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Last Activity
-                    </th>
-                    <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Actions
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
-                  {groups.map((group) => (
-                    <GroupRow
-                      key={group.id}
-                      group={group}
-                      onSuspend={handleSuspendGroup}
-                    />
+      {/* Groups tab */}
+      {tab === 'groups' && (
+        <div className="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
+          <div className="p-5 border-b border-gray-100">
+            <p className="font-bold text-gray-900">All Registered Groups</p>
+            <p className="text-sm text-gray-500 mt-0.5">{groups.length} groups shown</p>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead className="bg-gray-50 border-b border-gray-100">
+                <tr>
+                  {['Group Name', 'Members', 'Treasurer', 'Cycle / Week', 'Status', 'Last Active', 'Actions'].map(h => (
+                    <th key={h} className="px-5 py-3 text-left text-xs font-semibold text-gray-500">{h}</th>
                   ))}
-                </tbody>
-              </table>
-            </div>
-          </CardContent>
-        </Card>
+                </tr>
+              </thead>
+              <tbody>
+                {groups.map((g) => (
+                  <tr key={g.id} className="border-b border-gray-50 hover:bg-gray-50">
+                    <td className="px-5 py-3 font-semibold text-gray-900">{g.name}</td>
+                    <td className="px-5 py-3 text-gray-600">{g.members}</td>
+                    <td className="px-5 py-3 text-gray-600">{g.treasurer}</td>
+                    <td className="px-5 py-3 text-gray-600">Cycle {g.cycle}, Week {g.week}</td>
+                    <td className="px-5 py-3">
+                      <span className={`rounded-full px-2.5 py-0.5 text-xs font-bold capitalize ${statusStyle(g.status)}`}>{g.status}</span>
+                    </td>
+                    <td className="px-5 py-3 text-gray-500 text-xs">{g.lastActivity}</td>
+                    <td className="px-5 py-3">
+                      <div className="flex gap-2">
+                        <button className="rounded-lg border border-gray-200 p-1.5 hover:bg-gray-100"><Eye size={14} /></button>
+                        <button className="rounded-lg border border-red-200 p-1.5 text-red-500 hover:bg-red-50"><Ban size={14} /></button>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
       )}
 
-      {/* Lenders Tab */}
-      {activeTab === 'lenders' && (
-        <Card>
-          <CardHeader>
-            <div className="flex items-center justify-between">
-              <div>
-                <CardTitle>Registered Lenders</CardTitle>
-                <CardDescription>
-                  Manage financial institution applications and approvals
-                </CardDescription>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Badge variant="warning">{stats.pendingApplications} pending</Badge>
-                <Button variant="outline" size="sm">
-                  <Filter className="h-4 w-4 mr-1" />
-                  Filter
-                </Button>
-              </div>
-            </div>
-          </CardHeader>
-          <CardContent>
-            <div className="overflow-x-auto">
-              <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Institution
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      License Number
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Status
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Applied
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Approved
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Reports Purchased
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Total Spent
-                    </th>
-                    <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Actions
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
-                  {lenders.map((lender) => (
-                    <LenderRow
-                      key={lender.id}
-                      lender={lender}
-                      onApprove={handleApproveLender}
-                      onReject={handleRejectLender}
-                    />
+      {/* Lenders tab */}
+      {tab === 'lenders' && (
+        <div className="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
+          <div className="p-5 border-b border-gray-100">
+            <p className="font-bold text-gray-900">Registered Lenders</p>
+            <p className="text-sm text-gray-500 mt-0.5">Banks, MFIs, and SACCOs with platform access</p>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead className="bg-gray-50 border-b border-gray-100">
+                <tr>
+                  {['Institution', 'License', 'Status', 'Reports Bought', 'Total Spent', 'Applied', 'Actions'].map(h => (
+                    <th key={h} className="px-5 py-3 text-left text-xs font-semibold text-gray-500">{h}</th>
                   ))}
-                </tbody>
-              </table>
-            </div>
-          </CardContent>
-        </Card>
+                </tr>
+              </thead>
+              <tbody>
+                {lenders.map((l) => (
+                  <tr key={l.id} className="border-b border-gray-50 hover:bg-gray-50">
+                    <td className="px-5 py-3 font-semibold text-gray-900">{l.name}</td>
+                    <td className="px-5 py-3 font-mono text-xs text-gray-500">{l.license}</td>
+                    <td className="px-5 py-3">
+                      <span className={`rounded-full px-2.5 py-0.5 text-xs font-bold capitalize ${statusStyle(l.status)}`}>{l.status}</span>
+                    </td>
+                    <td className="px-5 py-3 text-gray-600">{l.reports}</td>
+                    <td className="px-5 py-3 font-semibold text-gray-900">RWF {l.spent.toLocaleString()}</td>
+                    <td className="px-5 py-3 text-gray-500 text-xs">{l.applied}</td>
+                    <td className="px-5 py-3">
+                      <div className="flex gap-2">
+                        {l.status === 'pending' && (
+                          <>
+                            <button className="rounded-lg bg-green-100 px-2.5 py-1 text-xs font-bold text-green-700 hover:bg-green-200">Approve</button>
+                            <button className="rounded-lg bg-red-100 px-2.5 py-1 text-xs font-bold text-red-700 hover:bg-red-200">Reject</button>
+                          </>
+                        )}
+                        {l.status !== 'pending' && (
+                          <button className="rounded-lg border border-gray-200 p-1.5 hover:bg-gray-100"><Eye size={14} /></button>
+                        )}
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
       )}
 
-      {/* Disputes Tab */}
-      {activeTab === 'disputes' && (
-        <Card>
-          <CardHeader>
-            <div className="flex items-center justify-between">
-              <div>
-                <CardTitle>Escalated Disputes</CardTitle>
-                <CardDescription>
-                  Manage disputes escalated from group level
-                </CardDescription>
-              </div>
-              <Badge variant="error">{stats.escalatedDisputes} escalated</Badge>
-            </div>
-          </CardHeader>
-          <CardContent>
-            <div className="overflow-x-auto">
-              <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Group
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Member
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Description
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Priority
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Status
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Created
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Escalated
-                    </th>
-                    <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Actions
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
-                  {disputes.map((dispute) => (
-                    <DisputeRow
-                      key={dispute.id}
-                      dispute={dispute}
-                      onResolve={handleResolveDispute}
-                    />
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </CardContent>
-        </Card>
-      )}
-
-      {/* Revenue Tab */}
-      {activeTab === 'revenue' && (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <Card>
-            <CardHeader>
-              <CardTitle>Revenue Overview</CardTitle>
-              <CardDescription>
-                Platform earnings from all sources
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                  <span className="text-sm text-gray-600">Total Revenue</span>
-                  <span className="text-lg font-bold text-gray-900">RWF {stats.totalRevenue.toLocaleString()}</span>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
-                  <span className="text-sm text-blue-700">Monthly Revenue</span>
-                  <span className="text-lg font-bold text-blue-900">RWF {stats.monthlyRevenue.toLocaleString()}</span>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-green-50 rounded-lg">
-                  <span className="text-sm text-green-700">Credit Report Sales</span>
-                  <span className="text-lg font-bold text-green-900">RWF {(stats.totalRevenue * 0.7).toLocaleString()}</span>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-purple-50 rounded-lg">
-                  <span className="text-sm text-purple-700">Subscription Fees</span>
-                  <span className="text-lg font-bold text-purple-900">RWF {(stats.totalRevenue * 0.3).toLocaleString()}</span>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle>Revenue Breakdown</CardTitle>
-              <CardDescription>
-                Monthly revenue trends and analytics
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                <div className="text-center p-6 bg-gray-50 rounded-lg">
-                  <PieChart className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                  <h4 className="font-medium text-gray-900">Revenue Sources</h4>
-                  <div className="mt-4 space-y-2">
-                    <div className="flex justify-between">
-                      <span className="text-sm text-gray-600">Credit Reports (70%)</span>
-                      <span className="text-sm font-medium">RWF {(stats.monthlyRevenue * 0.7).toLocaleString()}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-sm text-gray-600">Subscriptions (30%)</span>
-                      <span className="text-sm font-medium">RWF {(stats.monthlyRevenue * 0.3).toLocaleString()}</span>
-                    </div>
+      {/* Disputes tab */}
+      {tab === 'disputes' && (
+        <div className="space-y-3">
+          {disputes.map((d) => (
+            <div key={d.id} className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+              <div className="flex items-start justify-between gap-4 flex-wrap">
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span className={`rounded-full px-2.5 py-0.5 text-xs font-bold ${priorityStyle(d.priority)}`}>{d.priority} priority</span>
+                    <span className={`rounded-full px-2.5 py-0.5 text-xs font-bold ${statusStyle(d.status)}`}>{d.status}</span>
                   </div>
+                  <p className="mt-2 font-bold text-gray-900">{d.issue}</p>
+                  <p className="text-sm text-gray-500 mt-1">
+                    <strong>{d.member}</strong> — {d.group} — {d.date}
+                  </p>
                 </div>
-                <div className="text-center p-4">
-                  <Button variant="outline">
-                    Download Full Report
-                  </Button>
+                <div className="flex gap-2">
+                  <button className="rounded-xl bg-green-100 px-3 py-2 text-xs font-bold text-green-700 hover:bg-green-200">Mark Resolved</button>
+                  <button className="rounded-xl border border-gray-200 px-3 py-2 text-xs font-semibold text-gray-600 hover:bg-gray-50">View Details</button>
                 </div>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          ))}
         </div>
       )}
-      
-      {/* Render nested routes */}
-      <Outlet />
     </div>
   );
 };

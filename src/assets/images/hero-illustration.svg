@@ -1,0 +1,77 @@
+<svg width="600" height="440" viewBox="0 0 600 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="440" rx="24" fill="#111827"/>
+  <!-- Glow -->
+  <ellipse cx="300" cy="220" rx="220" ry="160" fill="#F97316" fill-opacity="0.07"/>
+
+  <!-- Central phone -->
+  <rect x="230" y="80" width="140" height="240" rx="18" fill="#1F2937" stroke="#374151" stroke-width="1.5"/>
+  <rect x="238" y="96" width="124" height="196" rx="10" fill="#111827"/>
+  <!-- Screen content -->
+  <rect x="248" y="108" width="104" height="14" rx="7" fill="#F97316" fill-opacity="0.8"/>
+  <rect x="248" y="130" width="80" height="8" rx="4" fill="#374151"/>
+  <rect x="248" y="146" width="104" height="8" rx="4" fill="#374151"/>
+  <!-- Score circle -->
+  <circle cx="300" cy="200" r="36" fill="#1F2937" stroke="#F97316" stroke-width="3"/>
+  <text x="300" y="196" text-anchor="middle" fill="#F97316" font-size="18" font-weight="800" font-family="system-ui">742</text>
+  <text x="300" y="212" text-anchor="middle" fill="#9CA3AF" font-size="8" font-family="system-ui">CREDIT SCORE</text>
+  <!-- Bottom bar -->
+  <rect x="248" y="258" width="104" height="22" rx="11" fill="#F97316"/>
+  <text x="300" y="273" text-anchor="middle" fill="white" font-size="9" font-weight="700" font-family="system-ui">VIEW PASSPORT</text>
+  <!-- Home indicator -->
+  <rect x="278" y="306" width="44" height="4" rx="2" fill="#374151"/>
+
+  <!-- Left person -->
+  <circle cx="100" cy="160" r="28" fill="#374151"/>
+  <circle cx="100" cy="148" r="12" fill="#4B5563"/>
+  <path d="M76 180 Q100 168 124 180" fill="#4B5563"/>
+  <!-- Left phone small -->
+  <rect x="76" y="196" width="48" height="76" rx="8" fill="#1F2937" stroke="#F97316" stroke-width="1.5"/>
+  <rect x="80" y="202" width="40" height="58" rx="5" fill="#111827"/>
+  <rect x="84" y="208" width="32" height="6" rx="3" fill="#F97316" fill-opacity="0.7"/>
+  <rect x="84" y="220" width="24" height="4" rx="2" fill="#374151"/>
+  <rect x="84" y="230" width="32" height="4" rx="2" fill="#374151"/>
+  <rect x="84" y="244" width="32" height="10" rx="5" fill="#F97316"/>
+
+  <!-- Right person -->
+  <circle cx="500" cy="160" r="28" fill="#374151"/>
+  <circle cx="500" cy="148" r="12" fill="#4B5563"/>
+  <path d="M476 180 Q500 168 524 180" fill="#4B5563"/>
+  <!-- Right phone small -->
+  <rect x="476" y="196" width="48" height="76" rx="8" fill="#1F2937" stroke="#F97316" stroke-width="1.5"/>
+  <rect x="480" y="202" width="40" height="58" rx="5" fill="#111827"/>
+  <rect x="484" y="208" width="32" height="6" rx="3" fill="#F97316" fill-opacity="0.7"/>
+  <rect x="484" y="220" width="24" height="4" rx="2" fill="#374151"/>
+  <rect x="484" y="230" width="32" height="4" rx="2" fill="#374151"/>
+  <rect x="484" y="244" width="32" height="10" rx="5" fill="#F97316"/>
+
+  <!-- Bottom person left -->
+  <circle cx="160" cy="360" r="24" fill="#374151"/>
+  <circle cx="160" cy="350" r="10" fill="#4B5563"/>
+  <path d="M140 374 Q160 364 180 374" fill="#4B5563"/>
+
+  <!-- Bottom person right -->
+  <circle cx="440" cy="360" r="24" fill="#374151"/>
+  <circle cx="440" cy="350" r="10" fill="#4B5563"/>
+  <path d="M420 374 Q440 364 460 374" fill="#4B5563"/>
+
+  <!-- Connection lines / money flow -->
+  <path d="M148 272 L230 200" stroke="#F97316" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.6"/>
+  <path d="M452 272 L370 200" stroke="#F97316" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.6"/>
+  <path d="M180 356 L230 320" stroke="#F97316" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.4"/>
+  <path d="M420 356 L370 320" stroke="#F97316" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.4"/>
+
+  <!-- MoMo coins -->
+  <circle cx="190" cy="236" r="10" fill="#F97316" opacity="0.9"/>
+  <text x="190" y="240" text-anchor="middle" fill="white" font-size="9" font-weight="800" font-family="system-ui">M</text>
+  <circle cx="410" cy="236" r="10" fill="#F97316" opacity="0.9"/>
+  <text x="410" y="240" text-anchor="middle" fill="white" font-size="9" font-weight="800" font-family="system-ui">M</text>
+  <circle cx="205" cy="338" r="8" fill="#EA580C" opacity="0.8"/>
+  <text x="205" y="342" text-anchor="middle" fill="white" font-size="7" font-weight="800" font-family="system-ui">M</text>
+  <circle cx="395" cy="338" r="8" fill="#EA580C" opacity="0.8"/>
+  <text x="395" y="342" text-anchor="middle" fill="white" font-size="7" font-weight="800" font-family="system-ui">M</text>
+
+  <!-- Label -->
+  <rect x="200" y="400" width="200" height="28" rx="14" fill="#1F2937"/>
+  <text x="300" y="418" text-anchor="middle" fill="#9CA3AF" font-size="10" font-family="system-ui">Community Savings · MoMo · Credit Score</text>
+</svg>

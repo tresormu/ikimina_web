@@ -35,8 +35,13 @@ const TreasurerNavigation: React.FC<TreasurerNavigationProps> = ({
   const menuItems = [
     {
       name: 'Dashboard',
-      href: '/dashboard',
+      href: '/treasurer',
       icon: Home,
+    },
+    {
+      name: 'My Profile',
+      href: '/treasurer/profile',
+      icon: Users,
     },
     {
       name: 'Members',
@@ -59,8 +64,8 @@ const TreasurerNavigation: React.FC<TreasurerNavigationProps> = ({
       icon: AlertTriangle,
     },
     {
-      name: 'Earnings',
-      href: '/treasurer/earnings',
+      name: 'Profits',
+      href: '/treasurer/profits',
       icon: CreditCard,
     },
   ];

@@ -1,7 +1,9 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from 'tailwindcss';
+
+const config: Config = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
@@ -12,9 +14,9 @@ module.exports = {
           200: '#fed7aa',
           300: '#fdba74',
           400: '#fb923c',
-          500: '#f97316', // Primary
-          600: '#ea580c', // Hover / Darker
-          700: '#c2410c', // Active / Deep
+          500: '#f97316',
+          600: '#ea580c',
+          700: '#c2410c',
           800: '#9a3412',
           900: '#7c2d12',
         },
@@ -29,15 +31,16 @@ module.exports = {
           700: '#374151',
           800: '#1f2937',
           900: '#111827',
-        }
+        },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Manrope', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.3s ease-out',
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'spin-slow': 'spin 1.2s linear infinite',
       },
       keyframes: {
         fadeIn: {
@@ -52,4 +55,6 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};
+
+export default config;

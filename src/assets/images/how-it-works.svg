@@ -1,0 +1,57 @@
+<svg width="560" height="200" viewBox="0 0 560 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="200" rx="16" fill="#FFF7ED"/>
+
+  <!-- Step nodes -->
+  <!-- 1 -->
+  <circle cx="60" cy="100" r="32" fill="#F97316"/>
+  <text x="60" y="96" text-anchor="middle" fill="white" font-size="18" font-weight="900" font-family="system-ui">1</text>
+  <text x="60" y="150" text-anchor="middle" fill="#374151" font-size="9" font-family="system-ui">Register</text>
+  <text x="60" y="162" text-anchor="middle" fill="#374151" font-size="9" font-family="system-ui">Group</text>
+
+  <!-- Arrow -->
+  <path d="M96 100 L136 100" stroke="#F97316" stroke-width="2.5" stroke-dasharray="5 3"/>
+  <polygon points="136,95 146,100 136,105" fill="#F97316"/>
+
+  <!-- 2 -->
+  <circle cx="180" cy="100" r="32" fill="#EA580C"/>
+  <text x="180" y="96" text-anchor="middle" fill="white" font-size="18" font-weight="900" font-family="system-ui">2</text>
+  <text x="180" y="150" text-anchor="middle" fill="#374151" font-size="9" font-family="system-ui">Contribute</text>
+  <text x="180" y="162" text-anchor="middle" fill="#374151" font-size="9" font-family="system-ui">via MoMo</text>
+
+  <!-- Arrow -->
+  <path d="M216 100 L256 100" stroke="#EA580C" stroke-width="2.5" stroke-dasharray="5 3"/>
+  <polygon points="256,95 266,100 256,105" fill="#EA580C"/>
+
+  <!-- 3 -->
+  <circle cx="300" cy="100" r="32" fill="#C2410C"/>
+  <text x="300" y="96" text-anchor="middle" fill="white" font-size="18" font-weight="900" font-family="system-ui">3</text>
+  <text x="300" y="150" text-anchor="middle" fill="#374151" font-size="9" font-family="system-ui">Records</text>
+  <text x="300" y="162" text-anchor="middle" fill="#374151" font-size="9" font-family="system-ui">Auto-saved</text>
+
+  <!-- Arrow -->
+  <path d="M336 100 L376 100" stroke="#C2410C" stroke-width="2.5" stroke-dasharray="5 3"/>
+  <polygon points="376,95 386,100 376,105" fill="#C2410C"/>
+
+  <!-- 4 -->
+  <circle cx="420" cy="100" r="32" fill="#9A3412"/>
+  <text x="420" y="96" text-anchor="middle" fill="white" font-size="18" font-weight="900" font-family="system-ui">4</text>
+  <text x="420" y="150" text-anchor="middle" fill="#374151" font-size="9" font-family="system-ui">Credit</text>
+  <text x="420" y="162" text-anchor="middle" fill="#374151" font-size="9" font-family="system-ui">Passport</text>
+
+  <!-- Arrow -->
+  <path d="M456 100 L496 100" stroke="#9A3412" stroke-width="2.5" stroke-dasharray="5 3"/>
+  <polygon points="496,95 506,100 496,105" fill="#9A3412"/>
+
+  <!-- 5 -->
+  <circle cx="530" cy="100" r="24" fill="#7C2D12"/>
+  <text x="530" y="96" text-anchor="middle" fill="white" font-size="14" font-weight="900" font-family="system-ui">5</text>
+  <text x="530" y="150" text-anchor="middle" fill="#374151" font-size="9" font-family="system-ui">Get</text>
+  <text x="530" y="162" text-anchor="middle" fill="#374151" font-size="9" font-family="system-ui">Loan</text>
+
+  <!-- Icons inside circles -->
+  <text x="60" y="108" text-anchor="middle" fill="white" font-size="10" font-family="system-ui">👥</text>
+  <text x="180" y="108" text-anchor="middle" fill="white" font-size="10" font-family="system-ui">📱</text>
+  <text x="300" y="108" text-anchor="middle" fill="white" font-size="10" font-family="system-ui">📋</text>
+  <text x="420" y="108" text-anchor="middle" fill="white" font-size="10" font-family="system-ui">⭐</text>
+  <text x="530" y="108" text-anchor="middle" fill="white" font-size="9" font-family="system-ui">🏦</text>
+</svg>

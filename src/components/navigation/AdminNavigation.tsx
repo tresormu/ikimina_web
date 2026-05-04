@@ -51,6 +51,11 @@ const AdminNavigation: React.FC<AdminNavigationProps> = ({
       href: '/admin/disputes',
       icon: Shield,
     },
+    {
+      name: 'Platform Profits',
+      href: '/admin/profits',
+      icon: Shield,
+    },
   ];
 
   const isActive = (href: string) => {
