@@ -1,18 +1,21 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-
-const navItems = [
-  { label: 'Home', to: '/' },
-  { label: 'How It Works', to: '/how-it-works' },
-  { label: 'Services', to: '/services' },
-  { label: 'About', to: '/about' },
-  { label: 'Pricing', to: '/pricing' },
-  { label: 'Contact', to: '/contact' },
-];
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from '../ui/LanguageSwitcher';
 
 const PublicNavbar: React.FC = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = React.useState(false);
+
+  const navItems = [
+    { label: t('navigation.home'), to: '/' },
+    { label: t('navigation.how_it_works'), to: '/how-it-works' },
+    { label: t('navigation.services'), to: '/services' },
+    { label: t('navigation.about'), to: '/about' },
+    { label: t('navigation.pricing'), to: '/pricing' },
+    { label: t('navigation.contact'), to: '/contact' },
+  ];
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>
     `text-sm font-semibold transition-colors ${
@@ -28,7 +31,7 @@ const PublicNavbar: React.FC = () => {
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary-500 text-white font-black text-sm shadow-sm">
             IP
           </div>
-          <span className="text-lg font-black text-gray-900">IkiminaPass</span>
+          <span className="text-lg font-black text-gray-900">{t('app.name')}</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -42,17 +45,18 @@ const PublicNavbar: React.FC = () => {
 
         {/* Desktop Auth Buttons */}
         <div className="hidden items-center gap-3 md:flex">
+          <LanguageSwitcher />
           <Link
             to="/login"
             className="rounded-xl border border-gray-200 px-4 py-2 text-sm font-semibold text-gray-700 hover:border-primary-300 hover:text-primary-600 transition-colors"
           >
-            Login
+            {t('navigation.login')}
           </Link>
           <Link
             to="/register"
             className="rounded-xl bg-primary-500 px-4 py-2 text-sm font-semibold text-white hover:bg-primary-600 active:bg-primary-700 transition-colors shadow-sm"
           >
-            Register
+            {t('navigation.register')}
           </Link>
         </div>
 
@@ -94,14 +98,14 @@ const PublicNavbar: React.FC = () => {
               onClick={() => setIsOpen(false)}
               className="rounded-xl border border-gray-200 px-4 py-2.5 text-center text-sm font-semibold text-gray-700"
             >
-              Login
+              {t('navigation.login')}
             </Link>
             <Link
               to="/register"
               onClick={() => setIsOpen(false)}
               className="rounded-xl bg-primary-500 px-4 py-2.5 text-center text-sm font-semibold text-white hover:bg-primary-600"
             >
-              Register
+              {t('navigation.register')}
             </Link>
           </div>
         </div>

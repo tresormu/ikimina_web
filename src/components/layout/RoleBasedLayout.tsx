@@ -3,8 +3,8 @@ import { Outlet } from 'react-router-dom';
 import { useAuthStore } from '../../stores/authStore';
 import { Button } from '../ui/Button';
 import { Menu } from 'lucide-react';
+import LanguageSwitcher from '../ui/LanguageSwitcher';
 import TreasurerNavigation from '../navigation/TreasurerNavigation';
-import LenderNavigation from '../navigation/LenderNavigation';
 import AdminNavigation from '../navigation/AdminNavigation';
 import MemberNavigation from '../navigation/MemberNavigation';
 
@@ -17,13 +17,6 @@ const RoleBasedLayout: React.FC = () => {
       case 'treasurer':
         return (
           <TreasurerNavigation
-            sidebarOpen={sidebarOpen}
-            setSidebarOpen={setSidebarOpen}
-          />
-        );
-      case 'lender':
-        return (
-          <LenderNavigation
             sidebarOpen={sidebarOpen}
             setSidebarOpen={setSidebarOpen}
           />
@@ -50,8 +43,6 @@ const RoleBasedLayout: React.FC = () => {
     switch (user?.role) {
       case 'treasurer':
         return 'flex-1 lg:mx-12';
-      case 'lender':
-        return 'flex-1 lg:mx-12';
       case 'admin':
         return 'flex-1 lg:mx-12';
       case 'member':
@@ -64,8 +55,6 @@ const RoleBasedLayout: React.FC = () => {
     switch (user?.role) {
       case 'treasurer':
         return 'bg-green-50';
-      case 'lender':
-        return 'bg-blue-50';
       case 'admin':
         return 'bg-red-50';
       case 'member':
@@ -100,6 +89,7 @@ const RoleBasedLayout: React.FC = () => {
                 <span className="text-sm text-gray-500">
                   Welcome back, {user?.fullName}
                 </span>
+                <LanguageSwitcher />
               </div>
             </div>
           </div>

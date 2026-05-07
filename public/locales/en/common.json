@@ -1,0 +1,88 @@
+{
+  "app": {
+    "name": "IkiminaPass",
+    "tagline": "Digital Community Savings Platform"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Logout",
+    "login": "Login",
+    "register": "Register",
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "how_it_works": "How It Works"
+  },
+  "actions": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "add": "Add",
+    "submit": "Submit",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter",
+    "refresh": "Refresh",
+    "download": "Download",
+    "upload": "Upload",
+    "export": "Export",
+    "import": "Import"
+  },
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "pending": "Pending",
+    "completed": "Completed",
+    "failed": "Failed",
+    "cancelled": "Cancelled",
+    "approved": "Approved",
+    "rejected": "Rejected",
+    "suspended": "Suspended"
+  },
+  "messages": {
+    "loading": "Loading...",
+    "no_data": "No data available",
+    "error_occurred": "An error occurred",
+    "success": "Success",
+    "operation_successful": "Operation completed successfully",
+    "operation_failed": "Operation failed",
+    "confirm_delete": "Are you sure you want to delete this item?",
+    "item_deleted": "Item deleted successfully",
+    "item_saved": "Item saved successfully"
+  },
+  "forms": {
+    "required_field": "This field is required",
+    "invalid_email": "Please enter a valid email address",
+    "invalid_phone": "Please enter a valid phone number",
+    "password_mismatch": "Passwords do not match",
+    "min_length": "Minimum {{count}} characters required",
+    "max_length": "Maximum {{count}} characters allowed"
+  },
+  "roles": {
+    "member": "Member",
+    "treasurer": "Treasurer",
+    "admin": "Administrator"
+  },
+  "time": {
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "this_week": "This Week",
+    "this_month": "This Month",
+    "last_week": "Last Week",
+    "last_month": "Last Month",
+    "ago": "{{time}} ago",
+    "in": "in {{time}}"
+  },
+  "currency": {
+    "rwf": "RWF"
+  }
+}

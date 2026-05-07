@@ -35,15 +35,10 @@ import LoanManagement from './pages/treasurer/LoanManagement';
 import USSDSimulator from './pages/treasurer/USSDSimulator';
 import MemberJoin from './pages/auth/MemberJoin';
 
-import LenderDashboard from './pages/lender/LenderDashboard';
-import LenderLogin from './pages/lender/LenderLogin';
-import CreditReportSearch from './pages/lender/CreditReportSearch';
-import Billing from './pages/lender/Billing';
 
 import AdminDashboard from './pages/admin/AdminDashboard';
 import AdminLogin from './pages/admin/AdminLogin';
 import GroupManagement from './pages/admin/GroupManagement';
-import LenderManagement from './pages/admin/LenderManagement';
 import DisputeResolution from './pages/admin/DisputeResolution';
 import AdminProfits from './pages/admin/AdminProfits';
 
@@ -90,7 +85,6 @@ function AppContent() {
         <Route path="/login" element={<AuthLayout><Login /></AuthLayout>} />
         <Route path="/register" element={<AuthLayout><Register /></AuthLayout>} />
         <Route path="/join" element={<MemberJoin />} />
-        <Route path="/lender/login" element={<AuthLayout><LenderLogin /></AuthLayout>} />
         <Route path="/admin/login" element={<AuthLayout><AdminLogin /></AuthLayout>} />
 
         <Route path="/" element={<ProtectedRoute><RoleBasedLayout /></ProtectedRoute>}>
@@ -110,14 +104,10 @@ function AppContent() {
           <Route path="treasurer/loans" element={<ProtectedRoute allowedRoles={['treasurer', 'admin']}><LoanManagement /></ProtectedRoute>} />
           <Route path="treasurer/ussd" element={<ProtectedRoute allowedRoles={['treasurer', 'admin']}><USSDSimulator /></ProtectedRoute>} />
 
-          <Route path="lender" element={<ProtectedRoute allowedRoles={['lender', 'admin']}><LenderDashboard /></ProtectedRoute>} />
-          <Route path="lender/credit-reports" element={<ProtectedRoute allowedRoles={['lender', 'admin']}><CreditReportSearch /></ProtectedRoute>} />
-          <Route path="lender/billing" element={<ProtectedRoute allowedRoles={['lender', 'admin']}><Billing /></ProtectedRoute>} />
 
           <Route path="admin" element={<ProtectedRoute allowedRoles={['admin']}><AdminDashboard /></ProtectedRoute>} />
           <Route path="admin/groups" element={<ProtectedRoute allowedRoles={['admin']}><GroupManagement /></ProtectedRoute>} />
-          <Route path="admin/lenders" element={<ProtectedRoute allowedRoles={['admin']}><LenderManagement /></ProtectedRoute>} />
-          <Route path="admin/disputes" element={<ProtectedRoute allowedRoles={['admin']}><DisputeResolution /></ProtectedRoute>} />
+                    <Route path="admin/disputes" element={<ProtectedRoute allowedRoles={['admin']}><DisputeResolution /></ProtectedRoute>} />
           <Route path="admin/profits" element={<ProtectedRoute allowedRoles={['admin']}><AdminProfits /></ProtectedRoute>} />
         </Route>
 

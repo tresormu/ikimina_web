@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import { useTranslation } from 'react-i18next';
 import { Button } from '../../components/ui/Button';
 import { Input } from '../../components/ui/Input';
 import { Select } from '../../components/ui/Select';
@@ -10,9 +11,10 @@ import { LoginFormData } from '../../types';
 import { Users, Building2, Shield } from 'lucide-react';
 
 const Login: React.FC = () => {
+  const { t } = useTranslation('auth');
   const [showOtp, setShowOtp] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [selectedRole, setSelectedRole] = useState<'treasurer' | 'lender' | 'admin'>('treasurer');
+  const [selectedRole, setSelectedRole] = useState<'treasurer' | 'admin'>('treasurer');
   const navigate = useNavigate();
   const login = useAuthStore((state) => state.login);
 
@@ -29,11 +31,7 @@ const Login: React.FC = () => {
   const onSubmitPhone = async (data: LoginFormData) => {
     setIsLoading(true);
     try {
-      if (selectedRole === 'lender') {
-        // Redirect to lender login page
-        navigate('/lender/login');
-        return;
-      } else if (selectedRole === 'admin') {
+      if (selectedRole === 'admin') {
         // Redirect to admin login page
         navigate('/admin/login');
         return;
@@ -91,12 +89,12 @@ const Login: React.FC = () => {
     <div className="space-y-6">
       <div>
         <h2 className="text-2xl font-bold text-gray-900">
-          {showOtp ? 'Enter OTP' : 'Sign in to your account'}
+          {showOtp ? t('login.otp_label') : t('login.title')}
         </h2>
         <p className="mt-2 text-sm text-gray-600">
           {showOtp
-            ? `Enter 6-digit code sent to ${phone}`
-            : 'Select your role and enter your credentials'}
+            ? `${t('login.otp_placeholder')} ${phone}`
+            : t('login.subtitle')}
         </p>
       </div>
 
@@ -105,24 +103,23 @@ const Login: React.FC = () => {
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
             <Users className="h-4 w-4 inline mr-2" />
-            Select Your Role
+            {t('login.role_selection')}
           </label>
           <Select 
             value={selectedRole} 
-            onChange={(e) => setSelectedRole(e.target.value as 'treasurer' | 'lender' | 'admin')}
+            onChange={(e) => setSelectedRole(e.target.value as 'treasurer' | 'admin')}
           >
-            <option value="treasurer">Treasurer - Manage group contributions</option>
-            <option value="lender">Lender - Access credit reports</option>
-            <option value="admin">Platform Admin - System administration</option>
+            <option value="treasurer">{t('login.treasurer_option')}</option>
+            <option value="admin">{t('login.admin_option')}</option>
           </Select>
         </div>
       )}
 
       <form className="space-y-6" onSubmit={handleSubmit(onFormSubmit)}>
         <Input
-          label="Phone Number"
+          label={t('login.phone_label')}
           type="tel"
-          placeholder="+250 7xx xxx xxx"
+          placeholder={t('login.phone_placeholder')}
           {...register('phone')}
           error={errors.phone?.message}
           disabled={showOtp}
@@ -131,9 +128,9 @@ const Login: React.FC = () => {
 
         {showOtp && (
           <Input
-            label="OTP Code"
+            label={t('login.otp_label')}
             type="text"
-            placeholder="Enter 6-digit code"
+            placeholder={t('login.otp_placeholder')}
             maxLength={6}
             {...register('otp')}
             error={errors.otp?.message}
@@ -146,7 +143,7 @@ const Login: React.FC = () => {
           loading={isLoading}
           disabled={isLoading}
         >
-          {showOtp ? 'Verify OTP' : 'Send OTP'}
+          {showOtp ? t('login.verify_otp') : t('login.send_otp')}
         </Button>
 
         {showOtp && (

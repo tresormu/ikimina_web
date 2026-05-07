@@ -1,0 +1,194 @@
+{
+  "admin": {
+    "dashboard": {
+      "title": "",
+      "subtitle": "",
+      "stats": {
+        "total_groups": "",
+        "active_groups": "",
+        "total_members": "", 
+        "across_groups": "",
+        "platform_revenue": "",
+        "this_month": "",
+        "open_disputes": "",
+        "escalated": "",
+        "credit_reports": "",
+        "revenue_from_reports": ""
+      },
+      "tabs": {
+        "overview": "",
+        "groups": "", 
+        "disputes": ""
+      },
+      "alerts": {
+        "groups_attention": "",
+        "groups_attention_desc": "",
+        "disputes_resolve": "",
+        "disputes_resolve_desc": ""
+      }
+    },
+    "groups": {
+      "title": "",
+      "subtitle": "",
+      "search_placeholder": "",
+      "status": {
+        "active": "",
+        "suspended": "",
+        "pending": ""
+      },
+      "actions": ""
+    },
+    "disputes": {
+      "title": "",
+      "subtitle": "",
+      "priority": {
+        "high": "",
+        "medium": "", 
+        "low": ""
+      },
+      "status": {
+        "open": "",
+        "in_progress": "",
+        "resolved": "",
+        "escalated": ""
+      }
+    },
+    "profits": {
+      "title": "",
+      "subtitle": "",
+      "period": "",
+      "total_revenue": "",
+      "total_costs": "",
+      "net_profit": ""
+    }
+  },
+  "treasurer": {
+    "dashboard": {
+      "title": "",
+      "subtitle": "",
+      "stats": {
+        "total_members": "",
+        "active_members": "",
+        "monthly_contributions": "",
+        "this_month": "",
+        "pending_contributions": "",
+        "overdue": "",
+        "group_balance": "",
+        "available": "",
+        "active_loans": "",
+        "pending_approval": ""
+      },
+      "tabs": {
+        "overview": "",
+        "members": "",
+        "contributions": "",
+        "loans": "",
+        "disputes": ""
+      },
+      "quick_actions": {
+        "add_contribution": "",
+        "approve_loan": "",
+        "view_reports": ""
+      }
+    },
+    "members": {
+      "title": "",
+      "subtitle": "",
+      "add_member": "",
+      "search_placeholder": "",
+      "status": {
+        "active": "",
+        "inactive": "",
+        "suspended": ""
+      }
+    },
+    "contributions": {
+      "title": "",
+      "subtitle": "",
+      "add_contribution": "",
+      "search_placeholder": "",
+      "status": {
+        "paid": "",
+        "pending": "",
+        "overdue": ""
+      },
+      "payment_method": {
+        "momo": "",
+        "cash": "",
+        "bank": ""
+      }
+    },
+    "loans": {
+      "title": "",
+      "subtitle": "",
+      "new_loan": "",
+      "search_placeholder": "",
+      "status": {
+        "pending": "",
+        "approved": "",
+        "active": "",
+        "completed": "",
+        "defaulted": ""
+      }
+    }
+  },
+  "member": {
+    "dashboard": {
+      "title": "",
+      "subtitle": "",
+      "stats": {
+        "my_contributions": "",
+        "this_month": "",
+        "credit_score": "",
+        "excellent": "",
+        "active_loans": "",
+        "pending": "",
+        "group_balance": "",
+        "my_share": ""
+      },
+      "tabs": {
+        "overview": "",
+        "contributions": "",
+        "loans": "",
+        "profile": ""
+      },
+      "quick_actions": {
+        "make_contribution": "",
+        "request_loan": "",
+        "view_statement": ""
+      }
+    },
+    "contributions": {
+      "title": "",
+      "subtitle": "",
+      "make_contribution": "",
+      "search_placeholder": "",
+      "status": {
+        "paid": "",
+        "pending": "",
+        "overdue": ""
+      }
+    },
+    "loans": {
+      "title": "",
+      "subtitle": "",
+      "new_loan": "",
+      "search_placeholder": "",
+      "status": {
+        "pending": "",
+        "approved": "",
+        "active": "",
+        "completed": "",
+        "rejected": ""
+      }
+    },
+    "profile": {
+      "title": "",
+      "subtitle": "",
+      "personal_info": "",
+      "contact_info": "",
+      "bank_info": "",
+      "save_changes": ""
+    }
+  }
+}

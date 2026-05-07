@@ -20,7 +20,7 @@ const services = [
     icon: <TrendingUp size={22} className="text-primary-600" />,
     title: 'Credit Passport Score (0 – 850)',
     desc: 'After 3 months of activity, every member earns a verified Credit Passport score backed by real MoMo transaction records. Share it with any bank, SACCO, or MFI to access formal loans.',
-    highlights: ['Generated after 3 months', 'Backed by MoMo data', 'Shareable with lenders'],
+    highlights: ['Generated after 3 months', 'Backed by MoMo data', 'Shareable with financial institutions'],
   },
   {
     icon: <Zap size={22} className="text-primary-600" />,
@@ -78,15 +78,15 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Lender section */}
+      {/* Financial Institutions section */}
       <section className="bg-gray-900 text-white py-16">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary-400">For Banks & MFIs</p>
           <h2 className="mt-3 text-2xl font-black sm:text-3xl">Access verified informal-sector credit data</h2>
           <p className="mt-4 text-gray-300 leading-relaxed">
-            Lenders can purchase verified Credit Passport reports for any IkiminaPass member. Each report
+            Financial institutions can access verified Credit Passport reports for any IkiminaPass member. Each report
             includes full MoMo-backed contribution history, score breakdown, and group behavior data —
-            giving you the confidence to lend to Rwanda's informal sector safely.
+            giving you confidence to lend to Rwanda's informal sector safely.
           </p>
           <Link
             to="/contact"

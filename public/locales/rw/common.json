@@ -1,0 +1,88 @@
+{
+  "app": {
+    "name": "IkiminaPass",
+    "tagline": "Ubugirane bw'Imiyoboro Y'Ihuriro"
+  },
+  "navigation": {
+    "dashboard": "Ububiko",
+    "profile": "Aho waba",
+    "settings": "Igenamiterere",
+    "logout": "Gusohoka",
+    "login": "Injira",
+    "register": "Iyandikishe",
+    "home": "Ahabanza",
+    "about": "Ibyerekeye",
+    "services": "Serivisi",
+    "pricing": "Igiciro",
+    "contact": "Twandikire",
+    "how_it_works": "Ukikora"
+  },
+  "actions": {
+    "save": "Bika",
+    "cancel": "Kuraho",
+    "delete": "Siba",
+    "edit": "Hindura",
+    "view": "Reba",
+    "add": "Ongeraho",
+    "submit": "Ohereza",
+    "confirm": "Emeza",
+    "back": "Garuka",
+    "next": "Komeza",
+    "previous": "Ibanjirije",
+    "search": "Shakisha",
+    "filter": "Hinga",
+    "refresh": "Kongera gutanga",
+    "download": "Pakuza",
+    "upload": "Shyiraho",
+    "export": "Kohereza",
+    "import": "Kuvana"
+  },
+  "status": {
+    "active": "Ikora",
+    "inactive": "Itakora",
+    "pending": "Iragiwe",
+    "completed": "Byarangiye",
+    "failed": "Byaranenze",
+    "cancelled": "Byahagaritswe",
+    "approved": "Byemewe",
+    "rejected": "Byakiriwe",
+    "suspended": "Byahagaritswe"
+  },
+  "messages": {
+    "loading": "Itangira...",
+    "no_data": "Nta data iboneka",
+    "error_occurred": "Habaye ikosa",
+    "success": "Byageze neza",
+    "operation_successful": "Igikorwa byarangiye neza",
+    "operation_failed": "Igikorwa byaranenze",
+    "confirm_delete": "Uzasubiryo gusiba iki?",
+    "item_deleted": "Ikintu cyasibuwe neza",
+    "item_saved": "Ikintu cyabitswe neza"
+  },
+  "forms": {
+    "required_field": "Uyu mwanya w'ingenzi",
+    "invalid_email": "Shyiramo aderesi y'imeyili idahwitse",
+    "invalid_phone": "Shyiramo nomero ya telephone idahwitse",
+    "password_mismatch": "Amagambo banga atahuranye",
+    "min_length": "Ahagwa {{count}} inyuguti",
+    "max_length": "Wemerese {{count}} inyuguti gusa"
+  },
+  "roles": {
+    "member": "Uwunyamuryango",
+    "treasurer": "Umutware w'ubwikuba",
+    "admin": "Ubuyobozi"
+  },
+  "time": {
+    "today": "Uyu munsi",
+    "yesterday": "Ejo",
+    "this_week": "Icyumweru niki",
+    "this_month": "Ukwezi niki",
+    "last_week": "Icyumweru gishize",
+    "last_month": "Ukwezi gushize",
+    "ago": "{{time}} hashize",
+    "in": "muri {{time}}"
+  },
+  "currency": {
+    "rwf": "RWF"
+  }
+}

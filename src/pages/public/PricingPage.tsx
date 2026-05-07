@@ -108,12 +108,12 @@ const PricingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Lender Pricing */}
+      {/* Financial Institutions Pricing */}
       <section className="bg-gray-50 py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
             <p className="text-sm font-semibold uppercase tracking-widest text-primary-500">For Banks & MFIs</p>
-            <h2 className="mt-3 text-2xl font-black text-gray-900">Lender Credit Report Access</h2>
+            <h2 className="mt-3 text-2xl font-black text-gray-900">Financial Institution Credit Report Access</h2>
             <p className="mt-3 text-gray-600 leading-relaxed">
               Banks, MFIs, and SACCOs pay a per-report fee to access verified Credit Passport reports.
               Each report includes full MoMo-backed contribution history, score breakdown, and group behavior data.
@@ -132,7 +132,7 @@ const PricingPage: React.FC = () => {
               to="/contact"
               className="mt-6 inline-flex items-center gap-2 rounded-xl bg-gray-900 px-6 py-3 font-bold text-white hover:bg-gray-800 transition-colors"
             >
-              Enquire About Lender Access <ArrowRight size={16} />
+              Enquire About Financial Institution Access <ArrowRight size={16} />
             </Link>
           </div>
         </div>

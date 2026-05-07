@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { useAuthStore } from '../../stores/authStore';
 import { Button } from '../ui/Button';
 import {
@@ -23,6 +24,7 @@ const TreasurerNavigation: React.FC<TreasurerNavigationProps> = ({
   sidebarOpen,
   setSidebarOpen,
 }) => {
+  const { t } = useTranslation();
   const { user, logout } = useAuthStore();
   const navigate = useNavigate();
   const location = useLocation();
@@ -34,12 +36,12 @@ const TreasurerNavigation: React.FC<TreasurerNavigationProps> = ({
 
   const menuItems = [
     {
-      name: 'Dashboard',
+      name: t('navigation.dashboard'),
       href: '/treasurer',
       icon: Home,
     },
     {
-      name: 'My Profile',
+      name: t('navigation.profile'),
       href: '/treasurer/profile',
       icon: Users,
     },
@@ -120,7 +122,7 @@ const TreasurerNavigation: React.FC<TreasurerNavigationProps> = ({
               <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">T</span>
               </div>
-              <h1 className="text-lg font-bold text-gray-900">Treasurer Portal</h1>
+              <h1 className="text-lg font-bold text-gray-900">{t('roles.treasurer')} Portal</h1>
             </div>
             <Button
               variant="ghost"
@@ -142,7 +144,7 @@ const TreasurerNavigation: React.FC<TreasurerNavigationProps> = ({
               </div>
               <div>
                 <p className="text-sm font-medium text-gray-900">{user?.fullName}</p>
-                <p className="text-xs text-green-600 font-medium capitalize">Treasurer</p>
+                <p className="text-xs text-green-600 font-medium capitalize">{t('roles.treasurer')}</p>
               </div>
             </div>
           </div>
@@ -181,7 +183,7 @@ const TreasurerNavigation: React.FC<TreasurerNavigationProps> = ({
               className="w-full justify-start text-gray-700 hover:text-red-600"
             >
               <LogOut className="h-4 w-4 mr-3" />
-              Logout
+              {t('navigation.logout')}
             </Button>
           </div>
         </div>

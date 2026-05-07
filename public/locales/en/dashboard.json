@@ -1,0 +1,194 @@
+{
+  "admin": {
+    "dashboard": {
+      "title": "Admin Dashboard",
+      "subtitle": "Full platform overview — groups, members, disputes, and revenue",
+      "stats": {
+        "total_groups": "Total Groups",
+        "active_groups": "active",
+        "total_members": "Total Members", 
+        "across_groups": "across all groups",
+        "platform_revenue": "Platform Revenue",
+        "this_month": "this month",
+        "open_disputes": "Open Disputes",
+        "escalated": "escalated",
+        "credit_reports": "Credit Reports Sold",
+        "revenue_from_reports": "revenue"
+      },
+      "tabs": {
+        "overview": "Overview",
+        "groups": "Groups", 
+        "disputes": "Disputes"
+      },
+      "alerts": {
+        "groups_attention": "Groups needing attention",
+        "groups_attention_desc": "2 with low collection rate, 1 suspended",
+        "disputes_resolve": "Disputes to resolve",
+        "disputes_resolve_desc": "3 escalated, 2 open for over 48 hours"
+      }
+    },
+    "groups": {
+      "title": "Group Management",
+      "subtitle": "Monitor and manage all savings groups",
+      "search_placeholder": "Search groups...",
+      "status": {
+        "active": "Active",
+        "suspended": "Suspended",
+        "pending": "Pending"
+      },
+      "actions": "Actions"
+    },
+    "disputes": {
+      "title": "Dispute Resolution",
+      "subtitle": "Review and resolve member disputes",
+      "priority": {
+        "high": "High",
+        "medium": "Medium", 
+        "low": "Low"
+      },
+      "status": {
+        "open": "Open",
+        "in_progress": "In Progress",
+        "resolved": "Resolved",
+        "escalated": "Escalated"
+      }
+    },
+    "profits": {
+      "title": "Platform Profits",
+      "subtitle": "Revenue and profit analytics",
+      "period": "Period",
+      "total_revenue": "Total Revenue",
+      "total_costs": "Total Costs",
+      "net_profit": "Net Profit"
+    }
+  },
+  "treasurer": {
+    "dashboard": {
+      "title": "Treasurer Dashboard",
+      "subtitle": "Manage your group's savings and contributions",
+      "stats": {
+        "total_members": "Total Members",
+        "active_members": "Active",
+        "monthly_contributions": "Monthly Contributions",
+        "this_month": "this month",
+        "pending_contributions": "Pending Contributions",
+        "overdue": "overdue",
+        "group_balance": "Group Balance",
+        "available": "available",
+        "active_loans": "Active Loans",
+        "pending_approval": "pending approval"
+      },
+      "tabs": {
+        "overview": "Overview",
+        "members": "Members",
+        "contributions": "Contributions",
+        "loans": "Loans",
+        "disputes": "Disputes"
+      },
+      "quick_actions": {
+        "add_contribution": "Add Contribution",
+        "approve_loan": "Approve Loan",
+        "view_reports": "View Reports"
+      }
+    },
+    "members": {
+      "title": "Member Management",
+      "subtitle": "Manage group members and their contributions",
+      "add_member": "Add Member",
+      "search_placeholder": "Search members...",
+      "status": {
+        "active": "Active",
+        "inactive": "Inactive",
+        "suspended": "Suspended"
+      }
+    },
+    "contributions": {
+      "title": "Contributions",
+      "subtitle": "Track and manage member contributions",
+      "add_contribution": "Add Contribution",
+      "search_placeholder": "Search contributions...",
+      "status": {
+        "paid": "Paid",
+        "pending": "Pending",
+        "overdue": "Overdue"
+      },
+      "payment_method": {
+        "momo": "Mobile Money",
+        "cash": "Cash",
+        "bank": "Bank Transfer"
+      }
+    },
+    "loans": {
+      "title": "Loan Management",
+      "subtitle": "Manage member loan requests and repayments",
+      "new_loan": "New Loan Request",
+      "search_placeholder": "Search loans...",
+      "status": {
+        "pending": "Pending Approval",
+        "approved": "Approved",
+        "active": "Active",
+        "completed": "Completed",
+        "defaulted": "Defaulted"
+      }
+    }
+  },
+  "member": {
+    "dashboard": {
+      "title": "Member Dashboard",
+      "subtitle": "Track your contributions and loan status",
+      "stats": {
+        "my_contributions": "My Contributions",
+        "this_month": "this month",
+        "credit_score": "Credit Score",
+        "excellent": "Excellent",
+        "active_loans": "Active Loans",
+        "pending": "pending",
+        "group_balance": "Group Balance",
+        "my_share": "my share"
+      },
+      "tabs": {
+        "overview": "Overview",
+        "contributions": "Contributions",
+        "loans": "Loans",
+        "profile": "Profile"
+      },
+      "quick_actions": {
+        "make_contribution": "Make Contribution",
+        "request_loan": "Request Loan",
+        "view_statement": "View Statement"
+      }
+    },
+    "contributions": {
+      "title": "My Contributions",
+      "subtitle": "View your contribution history",
+      "make_contribution": "Make Contribution",
+      "search_placeholder": "Search contributions...",
+      "status": {
+        "paid": "Paid",
+        "pending": "Pending",
+        "overdue": "Overdue"
+      }
+    },
+    "loans": {
+      "title": "My Loans",
+      "subtitle": "View your loan applications and repayments",
+      "new_loan": "Apply for Loan",
+      "search_placeholder": "Search loans...",
+      "status": {
+        "pending": "Pending Approval",
+        "approved": "Approved",
+        "active": "Active",
+        "completed": "Completed",
+        "rejected": "Rejected"
+      }
+    },
+    "profile": {
+      "title": "My Profile",
+      "subtitle": "Manage your personal information",
+      "personal_info": "Personal Information",
+      "contact_info": "Contact Information",
+      "bank_info": "Bank Information",
+      "save_changes": "Save Changes"
+    }
+  }
+}

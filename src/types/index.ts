@@ -5,7 +5,7 @@ export interface User {
   fullName: string;
   nationalId: string;
   profilePhoto?: string;
-  role: 'member' | 'treasurer' | 'lender' | 'admin';
+  role: 'member' | 'treasurer' | 'admin';
   createdAt: string;
   updatedAt: string;
 }
@@ -211,21 +211,10 @@ export interface TreasurerDashboard {
   recentActivity: Notification[];
 }
 
-export interface LenderDashboard {
-  totalReportsPurchased: number;
-  totalSpent: number;
-  recentPurchases: {
-    id: string;
-    memberName: string;
-    amount: number;
-    purchasedAt: string;
-  }[];
-  prepaidBalance: number;
-}
 
 export interface AdminDashboard {
   totalGroups: number;
-  totalLenders: number;
+  totalMembers: number;
   totalRevenue: number;
   activeDisputes: number;
   recentActivity: {

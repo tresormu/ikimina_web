@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { useAuthStore } from '../../stores/authStore';
 import { Button } from '../ui/Button';
 import {
@@ -21,6 +22,7 @@ const AdminNavigation: React.FC<AdminNavigationProps> = ({
   sidebarOpen,
   setSidebarOpen,
 }) => {
+  const { t } = useTranslation();
   const { user, logout } = useAuthStore();
   const navigate = useNavigate();
   const location = useLocation();
@@ -32,7 +34,7 @@ const AdminNavigation: React.FC<AdminNavigationProps> = ({
 
   const menuItems = [
     {
-      name: 'Dashboard',
+      name: t('navigation.dashboard'),
       href: '/admin',
       icon: Home,
     },
@@ -40,11 +42,6 @@ const AdminNavigation: React.FC<AdminNavigationProps> = ({
       name: 'Groups',
       href: '/admin/groups',
       icon: Users,
-    },
-    {
-      name: 'Lenders',
-      href: '/admin/lenders',
-      icon: UserCheck,
     },
     {
       name: 'Disputes',
@@ -88,7 +85,7 @@ const AdminNavigation: React.FC<AdminNavigationProps> = ({
               <div className="w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">A</span>
               </div>
-              <h1 className="text-lg font-bold text-gray-900">Admin Portal</h1>
+              <h1 className="text-lg font-bold text-gray-900">{t('roles.admin')} Portal</h1>
             </div>
             <Button
               variant="ghost"
@@ -110,7 +107,7 @@ const AdminNavigation: React.FC<AdminNavigationProps> = ({
               </div>
               <div>
                 <p className="text-sm font-medium text-gray-900">{user?.fullName}</p>
-                <p className="text-xs text-red-600 font-medium capitalize">Administrator</p>
+                <p className="text-xs text-red-600 font-medium capitalize">{t('roles.admin')}</p>
               </div>
             </div>
           </div>
@@ -149,7 +146,7 @@ const AdminNavigation: React.FC<AdminNavigationProps> = ({
               className="w-full justify-start text-gray-700 hover:text-red-600"
             >
               <LogOut className="h-4 w-4 mr-3" />
-              Logout
+              {t('navigation.logout')}
             </Button>
           </div>
         </div>

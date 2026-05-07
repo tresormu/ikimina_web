@@ -43,7 +43,7 @@ const howSteps = [
   'Every transaction is recorded automatically',
   'After 3 months, Credit Passport score is generated',
   'Member shares score with bank or SACCO',
-  'Lender offers fair formal loan rates',
+  'Financial institution offers fair formal loan rates',
 ];
 
 const problems = [

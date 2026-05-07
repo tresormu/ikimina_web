@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { useAuthStore } from '../../stores/authStore';
 import { Button } from '../ui/Button';
 import {
@@ -20,6 +21,7 @@ const MemberNavigation: React.FC<MemberNavigationProps> = ({
   sidebarOpen,
   setSidebarOpen,
 }) => {
+  const { t } = useTranslation();
   const { user, logout } = useAuthStore();
   const navigate = useNavigate();
   const location = useLocation();
@@ -31,7 +33,7 @@ const MemberNavigation: React.FC<MemberNavigationProps> = ({
 
   const menuItems = [
     {
-      name: 'Dashboard',
+      name: t('navigation.dashboard'),
       href: '/dashboard',
       icon: Home,
     },
@@ -77,7 +79,7 @@ const MemberNavigation: React.FC<MemberNavigationProps> = ({
               <div className="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">M</span>
               </div>
-              <h1 className="text-lg font-bold text-gray-900">Member Portal</h1>
+              <h1 className="text-lg font-bold text-gray-900">{t('roles.member')} Portal</h1>
             </div>
             <Button
               variant="ghost"

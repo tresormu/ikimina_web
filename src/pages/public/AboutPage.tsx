@@ -71,7 +71,7 @@ const problems = [
   {
     icon: <AlertTriangle size={20} className="text-red-500" />,
     title: 'Loan sharks fill the gap',
-    desc: 'With no access to formal credit, members turn to informal lenders charging 10% per month or more. A short-term emergency becomes a long-term debt trap.',
+    desc: 'With no access to formal credit, members turn to informal financial institutions charging 10% per month or more. A short-term emergency becomes a long-term debt trap.',
   },
   {
     icon: <AlertTriangle size={20} className="text-red-500" />,
@@ -201,7 +201,7 @@ const AboutPage: React.FC = () => {
           </h2>
           <p className="mt-4 text-gray-600 leading-relaxed">
             Trust is not something we ask for — it is something we earn through how the platform is built.
-            Here is exactly why members, treasurers, and lenders can rely on IkiminaPass:
+            Here is exactly why members, treasurers, and financial institutions can rely on IkiminaPass:
           </p>
           <div className="mt-8 grid gap-5 sm:grid-cols-2">
             {trustReasons.map((reason) => (

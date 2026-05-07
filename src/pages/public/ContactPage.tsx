@@ -19,7 +19,7 @@ const ContactPage: React.FC = () => {
     <>
       <PageHeader
         title="Contact Us"
-        subtitle="Talk to our team about group onboarding, support, or lender partnerships."
+        subtitle="Talk to our team about group onboarding, support, or financial institution partnerships."
       />
 
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
@@ -78,7 +78,7 @@ const ContactPage: React.FC = () => {
                     <option value="">Select a topic</option>
                     <option value="group">Register a Group</option>
                     <option value="support">Technical Support</option>
-                    <option value="lender">Lender Partnership</option>
+                    <option value="financial_institution">Financial Institution Partnership</option>
                     <option value="other">Other</option>
                   </select>
                 </div>
@@ -137,7 +137,7 @@ const ContactPage: React.FC = () => {
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-100">
                   <Building2 size={20} className="text-primary-700" />
                 </div>
-                <h3 className="font-bold text-primary-900">For Lenders & Partners</h3>
+                <h3 className="font-bold text-primary-900">For Financial Institutions & Partners</h3>
               </div>
               <p className="mt-3 text-primary-800 text-sm leading-relaxed">
                 Are you a bank, MFI, or SACCO interested in accessing verified informal-sector credit data?

@@ -1,0 +1,88 @@
+{
+  "app": {
+    "name": "IkiminaPass",
+    "tagline": "Plateforme d'Épargne Communautaire Numérique"
+  },
+  "navigation": {
+    "dashboard": "Tableau de bord",
+    "profile": "Profil",
+    "settings": "Paramètres",
+    "logout": "Déconnexion",
+    "login": "Connexion",
+    "register": "S'inscrire",
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "pricing": "Tarifs",
+    "contact": "Contact",
+    "how_it_works": "Comment ça marche"
+  },
+  "actions": {
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "view": "Voir",
+    "add": "Ajouter",
+    "submit": "Soumettre",
+    "confirm": "Confirmer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "refresh": "Actualiser",
+    "download": "Télécharger",
+    "upload": "Téléverser",
+    "export": "Exporter",
+    "import": "Importer"
+  },
+  "status": {
+    "active": "Actif",
+    "inactive": "Inactif",
+    "pending": "En attente",
+    "completed": "Terminé",
+    "failed": "Échoué",
+    "cancelled": "Annulé",
+    "approved": "Approuvé",
+    "rejected": "Rejeté",
+    "suspended": "Suspendu"
+  },
+  "messages": {
+    "loading": "Chargement...",
+    "no_data": "Aucune donnée disponible",
+    "error_occurred": "Une erreur s'est produite",
+    "success": "Succès",
+    "operation_successful": "Opération terminée avec succès",
+    "operation_failed": "Opération échouée",
+    "confirm_delete": "Êtes-vous sûr de vouloir supprimer cet élément ?",
+    "item_deleted": "Élément supprimé avec succès",
+    "item_saved": "Élément enregistré avec succès"
+  },
+  "forms": {
+    "required_field": "Ce champ est obligatoire",
+    "invalid_email": "Veuillez entrer une adresse e-mail valide",
+    "invalid_phone": "Veuillez entrer un numéro de téléphone valide",
+    "password_mismatch": "Les mots de passe ne correspondent pas",
+    "min_length": "Minimum {{count}} caractères requis",
+    "max_length": "Maximum {{count}} caractères autorisés"
+  },
+  "roles": {
+    "member": "Membre",
+    "treasurer": "Trésorier",
+    "admin": "Administrateur"
+  },
+  "time": {
+    "today": "Aujourd'hui",
+    "yesterday": "Hier",
+    "this_week": "Cette semaine",
+    "this_month": "Ce mois-ci",
+    "last_week": "La semaine dernière",
+    "last_month": "Le mois dernier",
+    "ago": "il y a {{time}}",
+    "in": "dans {{time}}"
+  },
+  "currency": {
+    "rwf": "RWF"
+  }
+}

@@ -30,12 +30,12 @@ const steps = [
     desc: 'After 3 months of consistent contributions, IkiminaPass generates a verified Credit Passport score from 0 to 850 based on payment consistency, tenure, and group behavior.',
   },
   {
-    title: 'Member Shares Score with Lender',
-    desc: 'The member authorizes a bank, SACCO, or MFI to access their Credit Passport report. The lender sees verified, MoMo-backed savings history.',
+    title: 'Member Shares Score with Financial Institution',
+    desc: 'The member authorizes a bank, SACCO, or MFI to access their Credit Passport report. The financial institution sees verified, MoMo-backed savings history.',
   },
   {
-    title: 'Lender Offers Fair Formal Loan',
-    desc: 'With verified credit data, the lender can offer a formal loan at fair rates — ending the cycle of 10% per month loan shark dependency.',
+    title: 'Financial Institution Offers Fair Formal Loan',
+    desc: 'With verified credit data, the financial institution can offer a formal loan at fair rates — ending the cycle of 10% per month loan shark dependency.',
   },
 ];
 

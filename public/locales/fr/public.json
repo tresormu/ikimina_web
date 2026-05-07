@@ -1,0 +1,301 @@
+{
+  "home": {
+    "hero": {
+      "tagline": "",
+      "title": "",
+      "description": "",
+      "get_started": "",
+      "see_how_it_works": ""
+    },
+    "who_we_are": {
+      "title": "",
+      "subtitle": "",
+      "description": "",
+      "team_description": "",
+      "learn_more": ""
+    },
+    "stats": {
+      "rwandans_in_groups": "",
+      "to_earn_credit": "",
+      "score_range": "",
+      "treasurer_revenue": ""
+    },
+    "problem_solution": {
+      "what_we_solve": "",
+      "subtitle": "",
+      "description": "",
+      "our_solution": "",
+      "solution_title": "",
+      "solution_points": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "credit_passport": {
+      "title": "",
+      "subtitle": "",
+      "description": "",
+      "minimum_history": "",
+      "score_range": "",
+      "backed_by": "",
+      "how_score_calculated": ""
+    },
+    "solutions": {
+      "title": "",
+      "subtitle": "",
+      "digital_management": {
+        "title": "",
+        "desc": ""
+      },
+      "momo_payments": {
+        "title": "",
+        "desc": ""
+      },
+      "credit_score": {
+        "title": "",
+        "desc": ""
+      },
+      "fund_protection": {
+        "title": "",
+        "desc": ""
+      }
+    },
+    "trust": {
+      "title": "",
+      "subtitle": "",
+      "description": "",
+      "no_cash_handling": {
+        "title": "",
+        "desc": ""
+      },
+      "every_member_sees": {
+        "title": "",
+        "desc": ""
+      },
+      "immutable_records": {
+        "title": "",
+        "desc": ""
+      },
+      "treasurers_rewarded": {
+        "title": "",
+        "desc": ""
+      }
+    },
+    "journey": {
+      "title": "",
+      "subtitle": ""
+    },
+    "cta_banner": {
+      "title": "",
+      "description": "",
+      "register_group": "",
+      "talk_to_us": ""
+    },
+    "title": "",
+    "subtitle": "",
+    "tagline": "",
+    "cta": "",
+    "features": {
+      "transparent": "",
+      "automated": "",
+      "credit_score": "",
+      "dispute_resolution": ""
+    },
+    "how_it_works": {
+      "title": "",
+      "steps": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "problems": {
+      "title": "",
+      "items": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "about": {
+    "title": "",
+    "subtitle": "",
+    "mission": "",
+    "problems": {
+      "title": "",
+      "cash_handling": "",
+      "no_credit_history": "",
+      "loan_sharks": "",
+      "fragile_records": ""
+    },
+    "trust": {
+      "title": "",
+      "subtitle": "",
+      "reasons": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "services": {
+    "title": "",
+    "subtitle": "",
+    "features": {
+      "digital_management": {
+        "title": "",
+        "desc": ""
+      },
+      "momo_payments": {
+        "title": "",
+        "desc": ""
+      },
+      "credit_passport": {
+        "title": "",
+        "desc": ""
+      },
+      "micro_loans": {
+        "title": "",
+        "desc": ""
+      },
+      "ussd_access": {
+        "title": "",
+        "desc": ""
+      },
+      "dispute_system": {
+        "title": "",
+        "desc": ""
+      }
+    },
+    "financial_institutions": {
+      "title": "",
+      "subtitle": "",
+      "desc": "",
+      "cta": ""
+    }
+  },
+  "pricing": {
+    "title": "",
+    "subtitle": "",
+    "group_plans": {
+      "basic": {
+        "title": "",
+        "price": "",
+        "desc": "",
+        "features": ["", "", "", ""]
+      },
+      "standard": {
+        "title": "",
+        "price": "",
+        "period": "",
+        "desc": "",
+        "features": ["", "", "", ""]
+      },
+      "premium": {
+        "title": "",
+        "price": "",
+        "period": "",
+        "desc": "",
+        "features": ["", "", "", ""]
+      }
+    },
+    "financial_institutions": {
+      "title": "",
+      "desc": "",
+      "standard_report": "",
+      "detailed_report": "",
+      "cta": ""
+    }
+  },
+  "contact": {
+    "title": "",
+    "subtitle": "",
+    "form": {
+      "title": "",
+      "desc": "",
+      "name": "",
+      "email": "",
+      "phone": "",
+      "subject": "",
+      "message": "",
+      "send": ""
+    },
+    "info": {
+      "email": "",
+      "phone": "",
+      "address": "",
+      "partners": "",
+      "partners_desc": ""
+    }
+  },
+  "how_it_works": {
+    "title": "",
+    "subtitle": "",
+    "steps": [
+      {
+        "title": "",
+        "desc": ""
+      },
+      {
+        "title": "",
+        "desc": ""
+      },
+      {
+        "title": "",
+        "desc": ""
+      },
+      {
+        "title": "",
+        "desc": ""
+      },
+      {
+        "title": "",
+        "desc": ""
+      },
+      {
+        "title": "",
+        "desc": ""
+      },
+      {
+        "title": "",
+        "desc": ""
+      },
+      {
+        "title": "",
+        "desc": ""
+      }
+    ],
+    "access_methods": {
+      "title": "",
+      "smartphone": {
+        "title": "",
+        "desc": "",
+        "badge": ""
+      },
+      "ussd": {
+        "title": "",
+        "desc": "",
+        "badge": ""
+      }
+    },
+    "credit_passport": {
+      "title": "",
+      "desc": "",
+      "stats": {
+        "history": "",
+        "range": "",
+        "backed_by": ""
+      }
+    },
+    "cta": ""
+  }
+}

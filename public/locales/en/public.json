@@ -1,0 +1,301 @@
+{
+  "home": {
+    "hero": {
+      "tagline": "Built for Rwanda's ikimina economy",
+      "title": "Turning Rwanda's Oldest Savings Tradition Into a Credit Superpower",
+      "description": "5.9 million Rwandans save together in community groups every week — but their records live in notebooks. IkiminaPass digitizes group management, automates MoMo contributions, and generates a verified Credit Passport score from 0 to 850.",
+      "get_started": "Get Started",
+      "see_how_it_works": "See How It Works"
+    },
+    "who_we_are": {
+      "title": "Who We Are",
+      "subtitle": "A team that grew up with ikimina",
+      "description": "IkiminaPass was founded by Rwandans who watched their families and communities rely on ikimina groups for decades. We know this tradition from the inside — the trust it requires, the discipline it builds, and the vulnerability it creates when that trust is broken.",
+      "team_description": "We are a fintech team combining deep local knowledge with modern technology — built to serve people who need it most, not just those who already have access.",
+      "learn_more": "Learn more about us"
+    },
+    "stats": {
+      "rwandans_in_groups": "Rwandans in savings groups",
+      "to_earn_credit": "To earn a Credit Passport",
+      "score_range": "Credit Passport score range",
+      "treasurer_revenue": "Revenue share for treasurers"
+    },
+    "problem_solution": {
+      "what_we_solve": "What We Solve",
+      "subtitle": "Years of savings discipline — invisible to banks",
+      "description": "Rwanda's ikimina groups are a powerful savings engine. But when a member walks into a bank asking for a loan, their years of weekly contributions count for nothing — no verifiable record, no credit history, no proof.",
+      "our_solution": "Our Solution",
+      "solution_title": "IkiminaPass fixes all of this",
+      "solution_points": [
+        "Digital ledger every member can verify in real time",
+        "MoMo automation removes human handling of funds",
+        "Credit Passport score built from real transaction data",
+        "Banks and SACCOs can now lend with confidence",
+        "Dispute resolution system for fair conflict handling"
+      ]
+    },
+    "credit_passport": {
+      "title": "Credit Passport",
+      "subtitle": "Your savings history, finally visible to banks",
+      "description": "After just 3 months of consistent contributions, IkiminaPass generates a verified Credit Passport score from 0 to 850 — calculated directly from your real MoMo transaction records. Share it with any bank, SACCO, or MFI to access formal loans at fair rates.",
+      "minimum_history": "Minimum history",
+      "score_range": "Score range",
+      "backed_by": "Backed by",
+      "how_score_calculated": "How score is calculated"
+    },
+    "solutions": {
+      "title": "What We Offer",
+      "subtitle": "Everything your group needs",
+      "digital_management": {
+        "title": "Digital Group Management",
+        "desc": "Replace notebooks with a transparent, tamper-proof digital ledger every member can see in real time."
+      },
+      "momo_payments": {
+        "title": "Automated MoMo Payments",
+        "desc": "Contributions are collected and confirmed via MTN MoMo automatically — no chasing, no disputes."
+      },
+      "credit_score": {
+        "title": "Credit Passport Score",
+        "desc": "After 3 months, every member earns a verified score from 0 to 850 backed by real transaction history."
+      },
+      "fund_protection": {
+        "title": "Fund Protection",
+        "desc": "No more treasurers disappearing with group funds. Every franc is tracked, recorded, and accountable."
+      }
+    },
+    "trust": {
+      "title": "Why Trust Us",
+      "subtitle": "Trust is built into how the platform works",
+      "description": "We don't ask you to trust us — we built the platform so you don't have to take our word for it. Every safeguard is structural, not just a promise.",
+      "no_cash_handling": {
+        "title": "No cash ever touches a treasurer",
+        "desc": "All contributions flow directly through MTN MoMo — from member to group account. No human intermediary handles the money."
+      },
+      "every_member_sees": {
+        "title": "Every member sees every transaction",
+        "desc": "The group ledger is fully visible to all members in real time. No record can be altered without every member knowing."
+      },
+      "immutable_records": {
+        "title": "Immutable MoMo-backed records",
+        "desc": "Every transaction is timestamped and stored permanently. Records cannot be deleted or edited after confirmation."
+      },
+      "treasurers_rewarded": {
+        "title": "Treasurers are rewarded for honesty",
+        "desc": "We pay treasurers 35% of transaction fees. Accuracy and integrity are financially incentivized — not just expected."
+      }
+    },
+    "journey": {
+      "title": "The Journey",
+      "subtitle": "From savings group to bank loan"
+    },
+    "cta_banner": {
+      "title": "Ready to register your group?",
+      "description": "Join thousands of Rwandan savings groups building verified credit history today.",
+      "register_group": "Register Your Group",
+      "talk_to_us": "Talk to Us"
+    },
+    "title": "Transform Your Community Savings",
+    "subtitle": "Digital transparency for traditional ikimina groups",
+    "tagline": "Safe, transparent, and credit-building savings for Rwandan communities",
+    "cta": "Register Your Group Now",
+    "features": {
+      "transparent": "Transparent Accounting",
+      "automated": "Automated MoMo Payments",
+      "credit_score": "Credit Passport Score",
+      "dispute_resolution": "Dispute Resolution"
+    },
+    "how_it_works": {
+      "title": "How IkiminaPass Works",
+      "steps": [
+        "Group registers on IkiminaPass",
+        "Members contribute weekly via MTN MoMo",
+        "Every transaction is recorded automatically",
+        "After 3 months, Credit Passport score is generated",
+        "Member shares score with bank or SACCO",
+        "Financial institution offers fair formal loan rates"
+      ]
+    },
+    "problems": {
+      "title": "Traditional ikimina groups face critical challenges",
+      "items": [
+        "Treasurers disappear with group funds — members lose everything",
+        "Years of savings discipline are invisible to banks and SACCOs",
+        "No formal credit history means no access to fair loans",
+        "Members pay 10% per month to loan sharks as the only alternative"
+      ]
+    }
+  },
+  "about": {
+    "title": "About IkiminaPass",
+    "subtitle": "Bridging traditional savings and modern finance",
+    "mission": "Our mission is to digitize and secure community savings groups while preserving their social fabric and trust.",
+    "problems": {
+      "title": "The Problem We Solve",
+      "cash_handling": "Cash handling creates theft risk",
+      "no_credit_history": "No verifiable credit history",
+      "loan_sharks": "Loan sharks fill the gap",
+      "fragile_records": "Records are fragile and manipulable"
+    },
+    "trust": {
+      "title": "Why IkiminaPass is trustworthy",
+      "subtitle": "Trust is not something we ask for — it is something we earn",
+      "reasons": [
+        "Every transaction recorded automatically",
+        "MoMo integration eliminates cash handling",
+        "Immutable audit trail for all records",
+        "Dispute resolution system for conflicts"
+      ]
+    }
+  },
+  "services": {
+    "title": "Services & Features",
+    "subtitle": "Every tool your group needs to save safely, stay transparent, and build formal credit trust.",
+    "features": {
+      "digital_management": {
+        "title": "Digital Group Management",
+        "desc": "Replace notebooks and spreadsheets with a transparent, real-time digital ledger."
+      },
+      "momo_payments": {
+        "title": "Automated MoMo Payment Tracking",
+        "desc": "Contributions are collected automatically via MTN MoMo on the scheduled day."
+      },
+      "credit_passport": {
+        "title": "Credit Passport Score (0 – 850)",
+        "desc": "Share it with any bank, SACCO, or MFI to access formal loans."
+      },
+      "micro_loans": {
+        "title": "Emergency Micro-Loans",
+        "desc": "Members can access emergency micro-loans from the group fund."
+      },
+      "ussd_access": {
+        "title": "USSD Access for Feature Phones",
+        "desc": "No smartphone? No problem. Works on any phone."
+      },
+      "dispute_system": {
+        "title": "Dispute Resolution System",
+        "desc": "Formal dispute filing with evidence-based review."
+      }
+    },
+    "financial_institutions": {
+      "title": "For Banks & MFIs",
+      "subtitle": "Access verified informal-sector credit data",
+      "desc": "Financial institutions can access verified Credit Passport reports for any IkiminaPass member.",
+      "cta": "Partner With Us"
+    }
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Fair pricing designed for community savings groups",
+    "group_plans": {
+      "basic": {
+        "title": "Basic",
+        "price": "Free",
+        "desc": "Perfect for small groups getting started",
+        "features": ["Up to 10 members", "Basic features", "MoMo integration", "USSD access"]
+      },
+      "standard": {
+        "title": "Standard",
+        "price": "2,500 RWF",
+        "period": "per month",
+        "desc": "Ideal for growing groups",
+        "features": ["Up to 25 members", "All Basic features", "Credit Passport scoring", "Priority support"]
+      },
+      "premium": {
+        "title": "Premium",
+        "price": "5,000 RWF",
+        "period": "per month",
+        "desc": "For large, established groups",
+        "features": ["Unlimited members", "All Standard features", "Advanced analytics", "API access"]
+      }
+    },
+    "financial_institutions": {
+      "title": "Financial Institution Credit Report Access",
+      "desc": "Banks, MFIs, and SACCOs pay a per-report fee to access verified Credit Passport reports.",
+      "standard_report": "Standard credit report",
+      "detailed_report": "Full detailed report with audit trail",
+      "cta": "Enquire About Financial Institution Access"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Talk to our team about group onboarding, support, or financial institution partnerships.",
+    "form": {
+      "title": "Send us a message",
+      "desc": "We typically respond within one business day.",
+      "name": "Your Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message"
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address",
+      "partners": "For Financial Institutions & Partners",
+      "partners_desc": "Are you a bank, MFI, or SACCO interested in accessing verified informal-sector credit data?"
+    }
+  },
+  "how_it_works": {
+    "title": "How IkiminaPass Works",
+    "subtitle": "From weekly community savings to verified loan-readiness — a simple, fully digital journey.",
+    "steps": [
+      {
+        "title": "Group Registers on IkiminaPass",
+        "desc": "A treasurer creates a group account, sets the contribution amount, frequency, and invites members."
+      },
+      {
+        "title": "Members Join and Confirm",
+        "desc": "Each member receives an SMS or USSD prompt to confirm their participation."
+      },
+      {
+        "title": "Contributions Collected via MTN MoMo",
+        "desc": "On contribution day, members receive an automated MoMo payment request."
+      },
+      {
+        "title": "Every Transaction Recorded Automatically",
+        "desc": "Each payment is timestamped, confirmed, and stored in an immutable digital ledger."
+      },
+      {
+        "title": "Rotation Payout Managed Digitally",
+        "desc": "When it's a member's turn to receive the pot, the payout is sent automatically via MoMo."
+      },
+      {
+        "title": "Credit Passport Score Generated",
+        "desc": "After 3 months of consistent contributions, IkiminaPass generates a verified Credit Passport score."
+      },
+      {
+        "title": "Member Shares Score with Financial Institution",
+        "desc": "The member authorizes a bank, SACCO, or MFI to access their Credit Passport report."
+      },
+      {
+        "title": "Financial Institution Offers Fair Formal Loan",
+        "desc": "With verified credit data, financial institution can offer a formal loan at fair rates."
+      }
+    ],
+    "access_methods": {
+      "title": "Works for every Rwandan — smartphone or feature phone",
+      "smartphone": {
+        "title": "Smartphone App",
+        "desc": "Full dashboard for treasurers and members.",
+        "badge": "Full Features"
+      },
+      "ussd": {
+        "title": "USSD (Feature Phones)",
+        "desc": "Dial a short code to contribute, check your balance, and receive your Credit Passport score.",
+        "badge": "No Internet Required"
+      }
+    },
+    "credit_passport": {
+      "title": "Your savings history, finally visible to banks",
+      "desc": "The Credit Passport is a score from 0 to 850 calculated from your real MoMo transaction history.",
+      "stats": {
+        "history": "3 months",
+        "range": "0 – 850",
+        "backed_by": "MoMo records"
+      }
+    },
+    "cta": "Register Your Group Now"
+  }
+}

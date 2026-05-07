@@ -6,7 +6,6 @@ const stats = [
   { label: 'Total Groups', value: '156', sub: '142 active', icon: <Users size={20} className="text-primary-600" />, bg: 'bg-primary-50' },
   { label: 'Total Members', value: '3,240', sub: 'across all groups', icon: <Users size={20} className="text-blue-600" />, bg: 'bg-blue-50' },
   { label: 'Platform Revenue', value: 'RWF 12.5M', sub: 'RWF 2.1M this month', icon: <DollarSign size={20} className="text-green-600" />, bg: 'bg-green-50' },
-  { label: 'Active Lenders', value: '24', sub: '4 pending approval', icon: <UserCheck size={20} className="text-violet-600" />, bg: 'bg-violet-50' },
   { label: 'Open Disputes', value: '12', sub: '5 escalated', icon: <AlertTriangle size={20} className="text-red-600" />, bg: 'bg-red-50' },
   { label: 'Credit Reports Sold', value: '847', sub: 'RWF 8.47M revenue', icon: <TrendingUp size={20} className="text-yellow-600" />, bg: 'bg-yellow-50' },
 ];
@@ -19,13 +18,6 @@ const groups = [
   { id: '5', name: 'Gisozi Youth Savers', members: 10, treasurer: 'Eric Bizimana', status: 'active', cycle: 1, week: 6, lastActivity: '18 Jan 2024' },
 ];
 
-const lenders = [
-  { id: '1', name: 'ABC Finance Ltd', license: 'FL2024001234', status: 'approved', reports: 47, spent: 470000, applied: '15 Jan 2024' },
-  { id: '2', name: 'Rwanda Credit Union', license: 'FL2024001567', status: 'pending', reports: 0, spent: 0, applied: '20 Jan 2024' },
-  { id: '3', name: 'Quick Loans Ltd', license: 'FL2024000987', status: 'rejected', reports: 0, spent: 0, applied: '10 Jan 2024' },
-  { id: '4', name: 'BPR Bank Rwanda', license: 'FL2024002100', status: 'approved', reports: 120, spent: 1200000, applied: '01 Dec 2023' },
-];
-
 const disputes = [
   { id: '1', group: 'Kigali Savings Group', member: 'Jean Mugisha', issue: 'Payment not recorded after MoMo confirmation', status: 'escalated', priority: 'high', date: '18 Jan 2024' },
   { id: '2', group: 'Nyabugogo Investment Club', member: 'Alice Uwimana', issue: 'Rotation order dispute — member claims wrong position', status: 'open', priority: 'medium', date: '20 Jan 2024' },
@@ -34,7 +26,6 @@ const disputes = [
 
 const recentActivity = [
   { icon: <CheckCircle size={15} className="text-green-500" />, text: 'Kimironko Women Group completed Week 2 — 100% collection', time: '2 hours ago' },
-  { icon: <UserCheck size={15} className="text-blue-500" />, text: 'BPR Bank Rwanda purchased 5 credit reports', time: '4 hours ago' },
   { icon: <AlertTriangle size={15} className="text-red-500" />, text: 'New dispute escalated from Kigali Savings Group', time: '6 hours ago' },
   { icon: <Users size={15} className="text-primary-500" />, text: 'New group registered: Gisozi Youth Savers (10 members)', time: '1 day ago' },
   { icon: <DollarSign size={15} className="text-green-500" />, text: 'Monthly revenue milestone: RWF 2.1M collected', time: '2 days ago' },
@@ -63,7 +54,7 @@ const priorityStyle = (p: string) => {
 };
 
 const AdminDashboard: React.FC = () => {
-  const [tab, setTab] = useState<'overview' | 'groups' | 'lenders' | 'disputes'>('overview');
+  const [tab, setTab] = useState<'overview' | 'groups' | 'disputes'>('overview');
   const maxRevenue = Math.max(...monthlyRevenue.map(d => d.amount));
 
   return (
@@ -72,7 +63,7 @@ const AdminDashboard: React.FC = () => {
       <div className="flex items-center justify-between flex-wrap gap-4">
         <div>
           <h1 className="text-2xl font-black text-gray-900">Admin Dashboard</h1>
-          <p className="text-gray-500 mt-1">Full platform overview — groups, lenders, disputes, and revenue</p>
+          <p className="text-gray-500 mt-1">Full platform overview — groups, members, disputes, and revenue</p>
         </div>
         <Link
           to="/admin/profits"
@@ -135,7 +126,7 @@ const AdminDashboard: React.FC = () => {
 
       {/* Tabs */}
       <div className="flex gap-1 rounded-xl border border-gray-200 bg-gray-50 p-1 w-fit">
-        {(['overview', 'groups', 'lenders', 'disputes'] as const).map((t) => (
+        {(['overview', 'groups', 'disputes'] as const).map((t) => (
           <button
             key={t}
             onClick={() => setTab(t)}
@@ -151,7 +142,6 @@ const AdminDashboard: React.FC = () => {
         <div className="grid gap-4 sm:grid-cols-3">
           {[
             { label: 'Groups needing attention', value: '3', desc: '2 with low collection rate, 1 suspended', color: 'border-red-200 bg-red-50', textColor: 'text-red-700' },
-            { label: 'Lenders awaiting approval', value: '4', desc: 'Applications submitted in last 7 days', color: 'border-yellow-200 bg-yellow-50', textColor: 'text-yellow-700' },
             { label: 'Disputes to resolve', value: '5', desc: '3 escalated, 2 open for over 48 hours', color: 'border-orange-200 bg-orange-50', textColor: 'text-orange-700' },
           ].map((item) => (
             <div key={item.label} className={`rounded-2xl border p-5 ${item.color}`}>
@@ -194,54 +184,6 @@ const AdminDashboard: React.FC = () => {
                       <div className="flex gap-2">
                         <button className="rounded-lg border border-gray-200 p-1.5 hover:bg-gray-100"><Eye size={14} /></button>
                         <button className="rounded-lg border border-red-200 p-1.5 text-red-500 hover:bg-red-50"><Ban size={14} /></button>
-                      </div>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      )}
-
-      {/* Lenders tab */}
-      {tab === 'lenders' && (
-        <div className="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
-          <div className="p-5 border-b border-gray-100">
-            <p className="font-bold text-gray-900">Registered Lenders</p>
-            <p className="text-sm text-gray-500 mt-0.5">Banks, MFIs, and SACCOs with platform access</p>
-          </div>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm">
-              <thead className="bg-gray-50 border-b border-gray-100">
-                <tr>
-                  {['Institution', 'License', 'Status', 'Reports Bought', 'Total Spent', 'Applied', 'Actions'].map(h => (
-                    <th key={h} className="px-5 py-3 text-left text-xs font-semibold text-gray-500">{h}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {lenders.map((l) => (
-                  <tr key={l.id} className="border-b border-gray-50 hover:bg-gray-50">
-                    <td className="px-5 py-3 font-semibold text-gray-900">{l.name}</td>
-                    <td className="px-5 py-3 font-mono text-xs text-gray-500">{l.license}</td>
-                    <td className="px-5 py-3">
-                      <span className={`rounded-full px-2.5 py-0.5 text-xs font-bold capitalize ${statusStyle(l.status)}`}>{l.status}</span>
-                    </td>
-                    <td className="px-5 py-3 text-gray-600">{l.reports}</td>
-                    <td className="px-5 py-3 font-semibold text-gray-900">RWF {l.spent.toLocaleString()}</td>
-                    <td className="px-5 py-3 text-gray-500 text-xs">{l.applied}</td>
-                    <td className="px-5 py-3">
-                      <div className="flex gap-2">
-                        {l.status === 'pending' && (
-                          <>
-                            <button className="rounded-lg bg-green-100 px-2.5 py-1 text-xs font-bold text-green-700 hover:bg-green-200">Approve</button>
-                            <button className="rounded-lg bg-red-100 px-2.5 py-1 text-xs font-bold text-red-700 hover:bg-red-200">Reject</button>
-                          </>
-                        )}
-                        {l.status !== 'pending' && (
-                          <button className="rounded-lg border border-gray-200 p-1.5 hover:bg-gray-100"><Eye size={14} /></button>
-                        )}
                       </div>
                     </td>
                   </tr>
