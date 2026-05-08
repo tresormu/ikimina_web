@@ -1,98 +1,98 @@
 {
   "home": {
     "hero": {
-      "tagline": "",
-      "title": "",
-      "description": "",
-      "get_started": "",
-      "see_how_it_works": ""
+      "tagline": "Byakozwe mu bukungu bw'Ikimina u Rwanda",
+      "title": "Guhindura umurimo w'ubwigenge w'igihe kirekire muri Rwanda ukaba ari ingufu y'inguzanyo",
+      "description": "Muri buri week, miliyoni 5.9 abanyarwanda banga ibihano mu matsinda y'abanyamuryango, ariko amakuru yabo ari mu nyandiko. IkiminaPass ihindura imikorere y'itsinda, ihindura ibihano bya MoMo bikorwa otomatiki, kandi ikora score y'inguzanyo yemewe kuva kuri 0 kugeza kuri 850.",
+      "get_started": "Tangira",
+      "see_how_it_works": "Reba ikikora"
     },
     "who_we_are": {
-      "title": "",
-      "subtitle": "",
-      "description": "",
-      "team_description": "",
-      "learn_more": ""
+      "title": "Turi nde",
+      "subtitle": "Itsinda rize hamwe n'ikimina",
+      "description": "IkiminaPass yashinzwe n'Abanyarwanda bari bagezeje ku matsinda y'ikimina mu muryango wabo imyaka myinyi. Tuzi iyi tradition uko uko - ubwemeye ikenewe, akazi akora, n'ubukana bugaragaza iyo uwemeye yabaye.",
+      "team_description": "Turi itsinda rya fintekanyi rihuza ubumenyi bw'igihugu hamwe na teknoloji yo mu gihe hagiye - yakozwe kugira ngo serive abantu bakeneye cyane, siyo abafite uburenganzira bwibanza.",
+      "learn_more": "Menya byinshi kuri twebwe"
     },
     "stats": {
-      "rwandans_in_groups": "",
-      "to_earn_credit": "",
-      "score_range": "",
-      "treasurer_revenue": ""
+      "rwandans_in_groups": "Abanyarwanda mu matsinda y'ihuriro",
+      "to_earn_credit": "Kugira passport y'inguzanyo",
+      "score_range": "Intambwe ya score passport y'inguzanyo",
+      "treasurer_revenue": "Umusaruro w'abagenzi b'ubwikuba"
     },
     "problem_solution": {
-      "what_we_solve": "",
-      "subtitle": "",
-      "description": "",
-      "our_solution": "",
-      "solution_title": "",
+      "what_we_solve": "Tuvana iki mu buzima",
+      "subtitle": "Imyaka myinshi y'ubwigenge - ibitazwi n'ibanki",
+      "description": "Matsinda y'ikimina yo mu Rwanda ari injini y'ihuriro ry'ibihano. Ariko igihe umunyamuryango yinjira muri banki akaba asaba inguzanyo, imyaka ye y'ibihano bya buri week nta kimwe, nta makuru amenyerewe, nta mateka y'inguzanyo, nta ubushakashatsi.",
+      "our_solution": "Ikyihutirwa cacu",
+      "solution_title": "IkiminaPass ivana byose",
       "solution_points": [
-        "",
-        "",
-        "",
-        "",
-        ""
+        "Urupapuro rw'ikoranabuhanga ruri kuri interineti buri munyamuryango ashobora kureba muri real time",
+        "MoMo automation ivana umuntu wifashisha amafaranga",
+        "Score passport y'inguzanyo ikora kuva ku makuru ya transakisiyo nziza",
+        "Banki na SACCO ubu zishobora gutanga inguzanyo n'ubwemeye",
+        "Siseme y'ivanga icyo kibazo kugira ngo ibibazo byitwa n'uburyo bwiza"
       ]
     },
     "credit_passport": {
-      "title": "",
-      "subtitle": "",
-      "description": "",
-      "minimum_history": "",
-      "score_range": "",
-      "backed_by": "",
-      "how_score_calculated": ""
+      "title": "Passport y'Inguzanyo",
+      "subtitle": "Mateka y'ibihano yawe, nyuma yaboneka n'ibanki",
+      "description": "Nyuma amezi atatu gusa y'ibihano bya buri gihe, IkiminaPass ikora score yemewe ya passport y'inguzanyo kuva kuri 0 kugeza kuri 850 - ikorwa kuva ku makuru nziza za transakisiyo za MoMo yawe. Ushakisha n'iburihe banki, SACCO, cyangwa MFI kugira ngo ubone inguzanyo zemewe ku mafaranga meza.",
+      "minimum_history": "Mateka yo hasi",
+      "score_range": "Intambwe ya score",
+      "backed_by": "Iyashyizweho na",
+      "how_score_calculated": "Score yakorwa gute"
     },
     "solutions": {
-      "title": "",
-      "subtitle": "",
+      "title": "Twe dutoze",
+      "subtitle": "Byose itsinda yakeneye",
       "digital_management": {
-        "title": "",
-        "desc": ""
+        "title": "Imikorere y'itsinda rikora ikoranabuhanga",
+        "desc": "Hindura nyandiko urupapuro ruri kuri interineti ruzwi kandi rutazigira, buri munyamuryango ashobora kureba muri real time."
       },
       "momo_payments": {
-        "title": "",
-        "desc": ""
+        "title": "Amahurizi ya MoMo akorwa otomatiki",
+        "desc": "Ibihano bigarukira kandi bigaragazwa bakoresheje MTN MoMo otomatiki - nta gukurikira, nta makenga."
       },
       "credit_score": {
-        "title": "",
-        "desc": ""
+        "title": "Score ya Passport y'Inguzanyo",
+        "desc": "Nyuma amezi atatu, buri munyamuryango akora score yemewe kuva kuri 0 kugeza kuri 850 ishyizweho na mateka ya transakisiyo nziza."
       },
       "fund_protection": {
-        "title": "",
-        "desc": ""
+        "title": "Ukurinda amafaranga",
+        "desc": "Nta bagenzi b'ubwikuba bazarangira amafaranga y'itsinda. Buri faranga rurakurikirwa, rurandikwa, kandi rufite umwanzuro."
       }
     },
     "trust": {
-      "title": "",
-      "subtitle": "",
-      "description": "",
+      "title": "Wakwemeye twebwe",
+      "subtitle": "Ubwemeye bwashyizwe muri iyi platforme ikora",
+      "description": "Ntidutanga gusaba kwemeye twebwe - twashije iyi platforme kugira ngo utagira kuba twumva amagambo yacu. Buri kurinda ni by'ingenzi, siyo gusa umugisha.",
       "no_cash_handling": {
-        "title": "",
-        "desc": ""
+        "title": "Nta faranga ihuje n'umugenzi b'ubwikuba",
+        "desc": "Ibihano byose bigenda bakoresheje MTN MoMo - kuva kuri munyamuryango kugeza ku konti y'itsinda. Nta muntu w'ibyabo ukoresheje amafaranga."
       },
       "every_member_sees": {
-        "title": "",
-        "desc": ""
+        "title": "Buri munyamuryango araona buri transakisiyo",
+        "desc": "Urupapuro rw'itsinda ruzira kuri buri munyamuryango muri real time. Nta makuru ashobora guhindurwa atazwi n'abanyamuryango bose."
       },
       "immutable_records": {
-        "title": "",
-        "desc": ""
+        "title": "Makuru atazigira ashizweho na MoMo",
+        "desc": "Buri transakisiyo ifite igihe kandi ishimwa bihagije. Makuru nta bisubirwo cyangwa bigahindurwa nyuma yo kugaragazwa."
       },
       "treasurers_rewarded": {
-        "title": "",
-        "desc": ""
+        "title": "Abagenzi b'ubwikuba bakizwa kuri ubunyangamugayo",
+        "desc": "Twihaza abagenzi b'ubwikuba 35% by'amafaranga y'ibikorwa. Ukuri kwiza n'ubunyangamugayo birakizwa muri finans - siyo gusa bya ngombwa."
       }
     },
     "journey": {
-      "title": "",
-      "subtitle": ""
+      "title": "Inzira",
+      "subtitle": "Kuva itsinda y'ibihano kugeza ku nguzanyo ya banki"
     },
     "cta_banner": {
-      "title": "",
-      "description": "",
-      "register_group": "",
-      "talk_to_us": ""
+      "title": "Ushobora kwinjira itsinda yawe?",
+      "description": "Injira muri ibihirwe bya matsinda y'ibihano yo mu Rwanda bigira mateka y'inguzanyo yemewe uyu munsi.",
+      "register_group": "Injira itsinda yawe",
+      "talk_to_us": "Yandikishe twebwe"
     },
     "title": "",
     "subtitle": "",
@@ -105,196 +105,264 @@
       "dispute_resolution": ""
     },
     "how_it_works": {
-      "title": "",
+      "title": "Ikikora",
       "steps": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "Itsinda rinjira muri IkiminaPass",
+        "Abanyamuryango bahanga buri week bakoresheje MTN MoMo",
+        "Buri transakisiyo irandikwa otomatiki",
+        "Nyuma amezi atatu, score passport y'inguzanyo ikorwa",
+        "Munyamuryango asangiza score na banki cyangwa SACCO",
+        "Ikigo gishinzwe imari itanga inguzanyo zemewe ku mafaranga meza"
       ]
     },
     "problems": {
-      "title": "",
+      "title": "Ibibazo",
       "items": [
-        "",
-        "",
-        "",
-        ""
+        "Abagenzi b'ubwikuba bazarangira amafaranga y'itsinda - abanyamuryango batura byose",
+        "Imyaka myinshi y'ubwigenge ibitazwi n'ibanki na SACCO",
+        "Nta mateka y'inguzanyo zemewe bivamo ko nta gucuruzi ku nguzanyo meza",
+        "Abanyamuryango bahana 10% buri kwezi ku bantu gutwara inguzanyo nk'ihindura gusa"
       ]
     }
   },
   "about": {
-    "title": "",
-    "subtitle": "",
-    "mission": "",
+    "title": "Ibyerekeye IkiminaPass",
+    "subtitle": "Kugira amafaranga y'ibihano by'umwuga w'Ikimina yo mu Rwanda aba azirikana, abizigira, kandi b'ingufu z'imari.",
+    "mission": {
+      "title": "Intego Yacu",
+      "heading": "Guhindura ubwigenge bw'ibihano mu Rwanda aba ikimenyeto cy'imari",
+      "desc_1": "Tubwira ko buri wumunyarwanda wongeye kuri buri gihe mu itsinda y'ikimina amezi cyangwa imyaka, ashobora kubona ko ubwigenge bwe bwemewe na sisitemu y'imari. IkiminaPass ihari kugira ngo ifunge icyo gicamo — ikoresheje ikoranabuhanga kugira ngo ibyo bitazwi bihindure, iby'umwuga bihindure abazigira, kandi ababuze bihindure.",
+      "desc_2": "Intego yacu ntiyongera gushyiraho softaware. Ni ukuhindura by'ingenzi uko abashobora kubona inguzanyo mu Rwanda — ukwerekana ko imyitwarire y'ibihano, nta mateka ya konti ya banki, ari ukuri kuri ukwizigira kw'imari."
+    },
+    "who_we_are": {
+      "title": "Turi nde",
+      "heading": "Itsinda rize hamwe n'ikimina",
+      "desc_1": "IkiminaPass yashinzwe n'Abanyarwanda bari bagezeje ku itsinda y'ikimina mu muryango wabo imyaka myinyi. Tuzi iyi tradition uko uko - ubwemeye ikenewe, akazi akora, n'ubukana bugaragaza iyo uwemeye yabaye.",
+      "desc_2": "Turi itsinda rya fintekanyi rihuza ubumenyi bw'igihugu hamwe na teknoloji yo mu gihe hagiye - yakozwe kugira ngo serive abantu bakeneye cyane, siyo abafite uburenganzira bwibanza."
+    },
+    "stats": {
+      "members": "Abanyamuryango buri tsinda",
+      "frequency_value": "Buri week",
+      "frequency_label": "Igihe cy'ibihano bisanzwe",
+      "participating": "Abanyarwanda baragizemo"
+    },
+    "problem": {
+      "title": "Ibibazo",
+      "heading": "Tuvana iki mu buzima",
+      "desc": "Sisitemu y'ikimina yo mu Rwanda ari imwe y'ibikoresho by'imari by'umwuga bikomeye ku isi. Ariko ifite ibibano bine by'ingenzi IkiminaPass yashyizweho gukora:"
+    },
     "problems": {
-      "title": "",
-      "cash_handling": "",
-      "no_credit_history": "",
-      "loan_sharks": "",
-      "fragile_records": ""
+      "0": {
+        "title": "Amafaranga arangira n'abagenzi b'ubwikuba",
+        "desc": "Mu matsinda y'ikimina y'igisanzwe, umugenzi b'ubwikuba afite amafaranga yose. Ariko aba arangira — kandi byaba — abanyamuryango batura byose, nta gushakira mu mategeko."
+      },
+      "1": {
+        "title": "Nta mateka y'inguzanyo yemewe",
+        "desc": "Imyaka myinshi y'ibihano bya buri gihe by'ubwemeye nta kimwe ku banki. Nta makuru yemewe, nta umubiri, nta kimwe cya inguzanyo - byavamo ko abanyamuryango batazi kubona inguzanyo zumwuga."
+      },
+      "2": {
+        "title": "Abatwara inguzanyo bifatanije",
+        "desc": "Nta gucuruzi ku nguzanyo zumwuga, abanyamuryango bagera ku bigo by'imari by'umwuga bikwira 10% buri kwezi cyangwa byinshi. Ikibazo gito cy'igihe kibasha umwanda w'inguzanyo y'igihe kirekire."
+      },
+      "3": {
+        "title": "Makuru aragira kandi ashobora guhindurwa",
+        "desc": "Umwandiko urangira, dosiye ya Excel ihinduka, kandi makuru ashobora guhindurwa. Nta gukurikira, nta by'ingenzi, kandi nta buryo bwo gukemura ibibazo neza."
+      }
+    },
+    "solution": {
+      "title": "Ibyihutirwa Cacu",
+      "heading": "IkiminaPass ivana byose",
+      "points": [
+        "MoMo automation ivana umuntu wifashisha amafaranga",
+        "Urupapuro rw'ikoranabuhanga rurakora mateka y'inguzanyo yemewe",
+        "Score passport y'inguzanyo itanga abanyamuryango gucuruzi ku nguzanyo zumwuga ku mafaranga meza",
+        "Makuru azirikanya na gukemura ibibazo ivana guhindura"
+      ]
     },
     "trust": {
-      "title": "",
-      "subtitle": "",
-      "reasons": [
-        "",
-        "",
-        ""
-      ]
+      "title": "Wakwemeye twebwe",
+      "heading": "Wakwemeye IkiminaPass",
+      "desc": "Ubwemeye ntiyakwemera - ni ikintu twakira ku buryo iyi platforme yashyizweho. Niba wakwemeye by'ingenzi, abanyamuryango, abagenzi b'ubwikuba, n'ibigo by'imari bishobora kwihaza IkiminaPass:",
+      "reasons": {
+        "0": "Nta faranga ihuje n'umugenzi b'ubwikuba",
+        "0_desc": "Ibihano byose bigenda bakoresheje MTN MoMo - kuva kuri munyamuryango kugeza ku konti y'itsinda. Nta muntu w'ibyabo ukoresheje amafaranga.",
+        "1": "Buri munyamuryango araona buri transakisiyo",
+        "1_desc": "Urupapuro rw'itsinda ruzira kuri buri munyamuryango muri real time. Nta makuru ashobora guhindurwa atazwi n'abanyamuryango bose.",
+        "2": "Makuru atazigira ashizweho na MoMo",
+        "2_desc": "Buri transakisiyo ifite igihe kandi ishimwa bihagije. Makuru nta bisubirwo cyangwa bigahindurwa nyuma yo kugaragazwa.",
+        "3": "Score ya passport y'inguzanyo yakorwa ku makuru nziza",
+        "3_desc": "Score passport y'inguzanyo cacu ntiyibura ntiyitegerereza. Yakorwa kuva ku makuru za transakisiyo za MoMo zemejwe - ako ari na makuru banki na SACCO zishobora gusuzuma."
+      }
+    },
+    "story": {
+      "title": "Amateka Cacu",
+      "heading": "Wakozwe IkiminaPass",
+      "desc_1": "Tubonye inkuru imwe na imwe igaragara vuba: umunyamuryango w'itsinda wongeye buri gihe imyaka ibiri, hanyuma ashaka inguzanyo kugira ngo agwire ibikorwa bye cyangwa gukemura ikibazo cya siyansi. Yinjira muri banki. Banki isaba mateka y'inguzanyo. Nta yo - cyane ko banki yaba ibona. Aza atagira amafaranga kandi agera ku muntu gutwara inguzanyo ku 10% buri kwezi.",
+      "desc_2": "Muri iyi nshuro, umugenzi b'ubwikuba we afite umwandiko w'imyaka ibiri y'ibihano byiza. Uyu mwandiko nta kimwe ku banki. Yakozwe IkiminaPass kugira ngo ihindure iki - kugira ngo make makuru, kugira ngo ubwigenge bukomeze kugaragara, kandi gutanga buri wumubyaye umwemeyo w'imari yagize."
+    },
+    "values": {
+      "title": "Turi Dukora",
+      "heading": "Imibare Cacu",
+      "0": {
+        "title": "Itsinda ku mbere",
+        "desc": "Yakozwe IkiminaPass kugira ngo serive miliyoni z'Abanyarwanda banga hamwe - siyo guhindura tradition, ahubwo kuyirinda no kongera ingufu."
+      },
+      "1": {
+        "title": "Kwihaza imari",
+        "desc": "Intego yacu ni ukugira inguzanyo zumwuga igaburirwe buri wumunyarwanda wongeye kuri buri gihe - yaba afite konti ya banki cyangwa atafite."
+      },
+      "2": {
+        "title": "Ubwizigirwa bwuzuye",
+        "desc": "Buri transakisiyo aragaragara ku buri munyamuryango. Nta bihano bihishwe, nta buryo bw'ikora butazwi. Ubwemeye bwakozwa ku gukora byose azirikanya kandi byemewe."
+      }
+    },
+    "edge": {
+      "title": "Ingufu Cacu",
+      "heading": "Twihaza abagenzi b'ubwikuba kutwakwira",
+      "desc": "Platforme nyinshi twakwira abagenzi b'ubwikuba amafaranga yo gukoresha softaware yazo. Tukora ikinyuranyo. IkiminaPass ihaguranya 35% by'igihe cy'ibikorwa yifunzwe n'umugenzi b'ubwikuba - ikora injini y'ihuriro ihagira mu Rwanda aho ukuri n'ubunyangamugayo bikizwa muri finans."
     }
   },
   "services": {
-    "title": "",
-    "subtitle": "",
+    "title": "Serivisi n'ibice",
+    "subtitle": "Buri bice itsinda ukeneye kugira ngo bange amafaranga neza, ubizigira, no gukora ubwemeye bw'inguzanyo zumwuga.",
     "features": {
       "digital_management": {
-        "title": "",
-        "desc": ""
+        "title": "Ukorikani rwa itsinda rizira",
+        "desc": "Hindura umwandiko urupapuro ruri kuri interineti ruzwi kandi rutazigira, buri munyamuryango ashobora kureba muri real time."
       },
       "momo_payments": {
-        "title": "",
-        "desc": ""
+        "title": "Amahurizi ya MoMo akorwa otomatiki",
+        "desc": "Ibihano bigarukira kandi bigaragazwa bakoresheje MTN MoMo - nta gukurikira, nta makenga."
       },
       "credit_passport": {
-        "title": "",
-        "desc": ""
+        "title": "Score ya Passport y'Inguzanyo (0 – 850)",
+        "desc": "Ushakisha n'iburihe banki, SACCO, cyangwa MFI kugira ngo ubone inguzanyo zemewe ku mafaranga meza."
       },
       "micro_loans": {
-        "title": "",
-        "desc": ""
+        "title": "Inguzanyo nto z'ikibazo",
+        "desc": "Abanyamuryango bashobora kubona inguzanyo nto z'ikibazo ziva mu mafaranga y'itsinda."
       },
       "ussd_access": {
-        "title": "",
-        "desc": ""
+        "title": "Kugera kuri USSD",
+        "desc": "Kugera ku bice bisanzwe ku banyamuryango batagira telefoni ya smartphone bakoresheje kode USSD."
       },
       "dispute_system": {
-        "title": "",
-        "desc": ""
+        "title": "Sisitemu yo gukemura ibibazo",
+        "desc": "Uburyo bwuzuye bwo gukemura ibibazo ku buryo buhoraho."
       }
     },
     "financial_institutions": {
-      "title": "",
-      "subtitle": "",
-      "desc": "",
-      "cta": ""
+      "title": "Kugera ku bice by'ibigo by'imari",
+      "subtitle": "Kubona ibikurikira by'inguzanyo bya sector y'umwuga byemewe",
+      "desc": "Banki, SACCO, na MFI bashobora kubona raporo z'inguzanyo zemewe kugira ngo bacunze ibisubizo by'inguzanyo.",
+      "cta": "Menya byinshi"
     }
   },
   "pricing": {
-    "title": "",
-    "subtitle": "",
+    "title": "Amafaranga",
+    "subtitle": "Plan zoroshye no azirikanya zihujwe ku matsinda y'ingano zose",
     "group_plans": {
       "basic": {
-        "title": "",
-        "price": "",
-        "desc": "",
-        "features": ["", "", "", ""]
+        "title": "Ishingiro",
+        "price": "Bihagije",
+        "desc": "Ku matsinda nto bataheruka",
+        "features": ["Abanyamuryango kugeza ku 10", "Ukorikani ruzira rwa ishingiro", "Gukurikira amahurizi ya MoMo", "Ubufasha bw'imereri"]
       },
       "standard": {
-        "title": "",
-        "price": "",
-        "period": "",
-        "desc": "",
-        "features": ["", "", "", ""]
+        "title": "Ibisanzweho",
+        "price": "5,000 RWF / ukwezi",
+        "period": "buri itsinda",
+        "desc": "Ku matsinda yashizwe zikaba kwishakira ibice byinshi",
+        "features": ["Abanyamuryango kugeza ku 30", "Score y'inguzanyo yakorwe", "Raporo z'urukiko", "Ubufasha bwa mbere"]
       },
       "premium": {
-        "title": "",
-        "price": "",
-        "period": "",
-        "desc": "",
-        "features": ["", "", "", ""]
+        "title": "Ibyiza",
+        "price": "10,000 RWF / ukwezi",
+        "period": "buri itsinda",
+        "desc": "Ku bigo byinshi bifuje ibisabwa by'ingenzi",
+        "features": ["Abanyamuryango batagira umupaka", "API yo guhuza", "Ubufasha bwa gahunda", "Amahugurwa y'ihuriro"]
       }
     },
     "financial_institutions": {
-      "title": "",
-      "desc": "",
-      "standard_report": "",
-      "detailed_report": "",
-      "cta": ""
+      "title": "Kugera ku bice by'ibigo by'imari",
+      "desc": "Kubona ibikurikira by'inguzanyo bya sector y'umwuga byemewe kugira ngo bacunze ibisubizo by'inguzanyo.",
+      "standard_report": "Raporo y'inguzanyo y'isanzweho",
+      "detailed_report": "Raporo rirukiko n'urukiko rw'ubushakashatsi",
+      "cta": "Menya byinshi"
     }
   },
   "contact": {
-    "title": "",
-    "subtitle": "",
+    "title": "Dufatanye n'ibyanyu",
+    "subtitle": "Menya umuryango wacu ku bijyanye no kwinjira itsinda, ubufasha, cyangwa ubufunganye bw'ibigo by'imari.",
     "form": {
-      "title": "",
-      "desc": "",
-      "name": "",
-      "email": "",
-      "phone": "",
-      "subject": "",
-      "message": "",
-      "send": ""
+      "title": "Tumva ubutumwa",
+      "desc": "Dukunda gusubiza munsi y'imunsi imwe y'akazi.",
+      "name": "Izina rya vuba",
+      "email": "Adresi y'imereri",
+      "phone": "Nomero ya terefone",
+      "subject": "Uko",
+      "message": "Ubutumwa",
+      "send": "Ohereza ubutumwa"
     },
     "info": {
-      "email": "",
-      "phone": "",
-      "address": "",
-      "partners": "",
-      "partners_desc": ""
+      "email": "Ubufasha bw'imereri",
+      "phone": "Ubufasha bwa terefone",
+      "address": "Kigali, Rwanda<br />KG XXX St, Gasabo District",
+      "partners": "Ibigo by'imari n'abafunganya",
+      "partners_desc": "Uri banki, MFI, cyangwa SACCO ufite kwishakira kubona ibikurikira by'inguzanyo bya sector y'umwuga byemewe?"
     }
   },
   "how_it_works": {
-    "title": "",
-    "subtitle": "",
+    "title": "IkiminaPass ikikora",
+    "subtitle": "Kuva ibihano bya buri week by'umwuga kugeza ku gucuruzi ku nguzanyo zumwuga - urugendo roroshye, rizira neza.",
     "steps": [
       {
-        "title": "",
-        "desc": ""
+        "title": "Itsinda rinjira muri IkiminaPass",
+        "desc": "Umugenzi b'ubwikuba akora konti y'itsinda, ashizaho amafaranga y'ibihano, igihe, kandi akita abanyamuryango."
       },
       {
-        "title": "",
-        "desc": ""
+        "title": "Abanyamuryango bongera kandi baremeza",
+        "desc": "Buri munyamuryango akira ubutumwa bwa SMS cyangwa USSD kugira ngo aremeze ubufatanye."
       },
       {
-        "title": "",
-        "desc": ""
+        "title": "Ibihano bigabanywa bakoresheje MTN MoMo",
+        "desc": "Umunsi w'ibihano, abanyamuryango baza guhabwa amafaranga ya MoMo bakoresheje otomatiki."
       },
       {
-        "title": "",
-        "desc": ""
+        "title": "Buri transakisiyo bandikwa otomatiki",
+        "desc": "Buri kwishura birarandikwa, biyemejwa, kandi bikandikwa muri urupapuro rwa ikoranabuhanga ruzira."
       },
       {
-        "title": "",
-        "desc": ""
+        "title": "Ibihano bya rotation bikorwa ikoranabuhanga",
+        "desc": "Igihe igihe cy'umunyamuryango guhabwa amafaranga, amafaranga aherezwa otomatiki bakoresheje MoMo."
       },
       {
-        "title": "",
-        "desc": ""
-      },
-      {
-        "title": "",
-        "desc": ""
-      },
-      {
-        "title": "",
-        "desc": ""
+        "title": "Score y'inguzanyo ikorwa otomatiki",
+        "desc": "Nyuma amezi atatu, score y'inguzanyo ya 0-850 ikorwa ikurikije amateka y'ibihano."
       }
     ],
     "access_methods": {
-      "title": "",
+      "title": "Kugera kuri IkiminaPass",
       "smartphone": {
-        "title": "",
-        "desc": "",
-        "badge": ""
+        "title": "Porogaramu ya Telefoni",
+        "desc": "Porogaramu yuzuye n'ibice byose",
+        "badge": "Ibyizewe"
       },
       "ussd": {
-        "title": "",
-        "desc": "",
-        "badge": ""
+        "title": "USSD (Internet nta kibyo)",
+        "desc": "Kugera ku bice bisanzwe bakoresheje kode USSD",
+        "badge": "Bihagije"
       }
     },
     "credit_passport": {
-      "title": "",
-      "desc": "",
+      "title": "Passport y'Inguzanyo Yakorwe",
+      "desc": "Nyaha amezi atatu gusa y'ibihano, buri munyamuryango akira score y'inguzanyo yemewe",
       "stats": {
-        "history": "",
-        "range": "",
-        "backed_by": ""
+        "history": "Amezi 3",
+        "range": "0 – 850",
+        "backed_by": "Amakuru ya MoMo"
       }
     },
-    "cta": ""
+    "cta": "Tangira Urugendo"
   }
 }

@@ -1,59 +1,62 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import PageHeader from '../../components/public/PageHeader';
 
-const groupPlans = [
-  {
-    tier: 'Small Group',
-    members: '5 – 10 members',
-    price: '2,000',
-    currency: 'RWF / month',
-    features: [
-      'Digital contribution ledger',
-      'Automated MoMo collection',
-      'Credit Passport for all members',
-      'USSD access included',
-      'Dispute resolution',
-    ],
-    highlight: false,
-  },
-  {
-    tier: 'Medium Group',
-    members: '11 – 20 members',
-    price: '3,500',
-    currency: 'RWF / month',
-    features: [
-      'Everything in Small Group',
-      'Advanced rotation management',
-      'Priority support',
-      'Group analytics dashboard',
-      'Emergency micro-loan access',
-    ],
-    highlight: true,
-  },
-  {
-    tier: 'Large Group',
-    members: '21 – 35 members',
-    price: '5,000',
-    currency: 'RWF / month',
-    features: [
-      'Everything in Medium Group',
-      'Multi-treasurer management',
-      'Dedicated account manager',
-      'Custom contribution schedules',
-      'Full audit trail export',
-    ],
-    highlight: false,
-  },
-];
-
 const PricingPage: React.FC = () => {
+  const { t } = useTranslation();
+
+  const groupPlans = [
+    {
+      tier: t('public:pricing.group_plans.basic.title'),
+      members: '5 – 10 members',
+      price: t('public:pricing.group_plans.basic.price'),
+      currency: 'RWF / month',
+      features: [
+        'Digital contribution ledger',
+        'Automated MoMo collection',
+        'Credit Passport for all members',
+        'USSD access included',
+        'Dispute resolution',
+      ],
+      highlight: false,
+    },
+    {
+      tier: t('public:pricing.group_plans.standard.title'),
+      members: '11 – 20 members',
+      price: t('public:pricing.group_plans.standard.price'),
+      currency: t('public:pricing.group_plans.standard.period'),
+      features: [
+        'Everything in Small Group',
+        'Advanced rotation management',
+        'Priority support',
+        'Group analytics dashboard',
+        'Emergency micro-loan access',
+      ],
+      highlight: true,
+    },
+    {
+      tier: t('public:pricing.group_plans.premium.title'),
+      members: '21 – 35 members',
+      price: t('public:pricing.group_plans.premium.price'),
+      currency: t('public:pricing.group_plans.premium.period'),
+      features: [
+        'Everything in Medium Group',
+        'Multi-treasurer management',
+        'Dedicated account manager',
+        'Custom contribution schedules',
+        'Full audit trail export',
+      ],
+      highlight: false,
+    },
+  ];
+
   return (
     <>
       <PageHeader
-        title="Simple, Transparent Pricing"
-        subtitle="No hidden fees. Treasurers earn — they don't pay. Groups pay a flat monthly subscription."
+        title={t('public:pricing.title')}
+        subtitle={t('public:pricing.subtitle')}
       />
 
       {/* Group Plans */}

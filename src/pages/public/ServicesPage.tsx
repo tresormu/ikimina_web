@@ -1,59 +1,62 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BookOpen, Smartphone, TrendingUp, Zap, Phone, MessageSquare, ShieldAlert, ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import PageHeader from '../../components/public/PageHeader';
 
-const services = [
-  {
-    icon: <BookOpen size={22} className="text-primary-600" />,
-    title: 'Digital Group Management',
-    desc: 'Replace notebooks and spreadsheets with a transparent, real-time digital ledger. Every member sees every transaction. Treasurers manage contributions, rotations, and disputes from one dashboard.',
-    highlights: ['Real-time balance visibility', 'Full contribution history', 'Rotation schedule management'],
-  },
-  {
-    icon: <Smartphone size={22} className="text-primary-600" />,
-    title: 'Automated MoMo Payment Tracking',
-    desc: 'Contributions are collected automatically via MTN MoMo on the scheduled day. Every payment is confirmed, timestamped, and recorded — no treasurer handles cash.',
-    highlights: ['Automated payment requests', 'Instant confirmation SMS', 'Zero cash handling'],
-  },
-  {
-    icon: <TrendingUp size={22} className="text-primary-600" />,
-    title: 'Credit Passport Score (0 – 850)',
-    desc: 'After 3 months of activity, every member earns a verified Credit Passport score backed by real MoMo transaction records. Share it with any bank, SACCO, or MFI to access formal loans.',
-    highlights: ['Generated after 3 months', 'Backed by MoMo data', 'Shareable with financial institutions'],
-  },
-  {
-    icon: <Zap size={22} className="text-primary-600" />,
-    title: 'Emergency Micro-Loans',
-    desc: 'Members with 6 or more months of consistent contribution history can access emergency micro-loans from the group fund — with transparent terms and automatic repayment tracking.',
-    highlights: ['Available after 6 months', 'Transparent loan terms', 'Automatic repayment tracking'],
-  },
-  {
-    icon: <Phone size={22} className="text-primary-600" />,
-    title: 'USSD Access for Feature Phones',
-    desc: 'No smartphone? No problem. Members on feature phones can contribute, check balances, and receive their Credit Passport score via USSD — no internet connection required.',
-    highlights: ['No internet needed', 'Works on any phone', 'Full contribution access'],
-  },
-  {
-    icon: <MessageSquare size={22} className="text-primary-600" />,
-    title: 'Dispute Resolution System',
-    desc: 'When payment disputes arise, members can raise a formal dispute through the platform. Treasurers review evidence, and unresolved cases are escalated to IkiminaPass support.',
-    highlights: ['Formal dispute filing', 'Evidence-based review', 'Escalation to support'],
-  },
-  {
-    icon: <ShieldAlert size={22} className="text-primary-600" />,
-    title: 'Wrong-Payment Prevention',
-    desc: 'Built-in safeguards verify payment amounts and recipient details before processing. Members receive confirmation prompts before any transaction is finalized.',
-    highlights: ['Amount verification', 'Recipient confirmation', 'Pre-transaction prompts'],
-  },
-];
-
 const ServicesPage: React.FC = () => {
+  const { t } = useTranslation();
+
+  const services = [
+    {
+      icon: <BookOpen size={22} className="text-primary-600" />,
+      title: t('public:services.features.digital_management.title'),
+      desc: t('public:services.features.digital_management.desc'),
+      highlights: ['Real-time balance visibility', 'Full contribution history', 'Rotation schedule management'],
+    },
+    {
+      icon: <Smartphone size={22} className="text-primary-600" />,
+      title: t('public:services.features.momo_payments.title'),
+      desc: t('public:services.features.momo_payments.desc'),
+      highlights: ['Automated payment requests', 'Instant confirmation SMS', 'Zero cash handling'],
+    },
+    {
+      icon: <TrendingUp size={22} className="text-primary-600" />,
+      title: t('public:services.features.credit_passport.title'),
+      desc: t('public:services.features.credit_passport.desc'),
+      highlights: ['Generated after 3 months', 'Backed by MoMo data', 'Shareable with financial institutions'],
+    },
+    {
+      icon: <Zap size={22} className="text-primary-600" />,
+      title: t('public:services.features.micro_loans.title'),
+      desc: t('public:services.features.micro_loans.desc'),
+      highlights: ['Available after 6 months', 'Transparent loan terms', 'Automatic repayment tracking'],
+    },
+    {
+      icon: <Phone size={22} className="text-primary-600" />,
+      title: t('public:services.features.ussd_access.title'),
+      desc: t('public:services.features.ussd_access.desc'),
+      highlights: ['No internet needed', 'Works on any phone', 'Full contribution access'],
+    },
+    {
+      icon: <MessageSquare size={22} className="text-primary-600" />,
+      title: t('public:services.features.dispute_system.title'),
+      desc: t('public:services.features.dispute_system.desc'),
+      highlights: ['Formal dispute process', 'Evidence tracking', 'Escalation support'],
+    },
+    {
+      icon: <ShieldAlert size={22} className="text-primary-600" />,
+      title: t('public:services.features.wrong_payment_prevention.title'),
+      desc: t('public:services.features.wrong_payment_prevention.desc'),
+      highlights: ['Amount verification', 'Recipient confirmation', 'Pre-transaction prompts'],
+    },
+  ];
+
   return (
     <>
       <PageHeader
-        title="Services & Features"
-        subtitle="Every tool your group needs to save safely, stay transparent, and build formal credit trust."
+        title={t('public:services.title')}
+        subtitle={t('public:services.subtitle')}
       />
 
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
@@ -81,18 +84,16 @@ const ServicesPage: React.FC = () => {
       {/* Financial Institutions section */}
       <section className="bg-gray-900 text-white py-16">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-widest text-primary-400">For Banks & MFIs</p>
-          <h2 className="mt-3 text-2xl font-black sm:text-3xl">Access verified informal-sector credit data</h2>
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary-400">{t('public:services.financial_institutions.title')}</p>
+          <h2 className="mt-3 text-2xl font-black sm:text-3xl">{t('public:services.financial_institutions.subtitle')}</h2>
           <p className="mt-4 text-gray-300 leading-relaxed">
-            Financial institutions can access verified Credit Passport reports for any IkiminaPass member. Each report
-            includes full MoMo-backed contribution history, score breakdown, and group behavior data —
-            giving you confidence to lend to Rwanda's informal sector safely.
+            {t('public:services.financial_institutions.desc')}
           </p>
           <Link
             to="/contact"
             className="mt-8 inline-flex items-center gap-2 rounded-xl bg-primary-500 px-7 py-3.5 font-bold text-white hover:bg-primary-600 active:bg-primary-700 transition-colors"
           >
-            Partner With Us <ArrowRight size={18} />
+            {t('public:services.financial_institutions.cta')} <ArrowRight size={18} />
           </Link>
         </div>
       </section>

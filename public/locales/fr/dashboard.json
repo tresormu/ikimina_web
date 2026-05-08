@@ -1,56 +1,56 @@
 {
   "admin": {
     "dashboard": {
-      "title": "",
-      "subtitle": "",
+      "title": "Tableau de bord d'administration",
+      "subtitle": "Présentation complète de la plateforme - groupes, membres, litiges et revenus",
       "stats": {
-        "total_groups": "",
-        "active_groups": "",
-        "total_members": "", 
-        "across_groups": "",
-        "platform_revenue": "",
-        "this_month": "",
-        "open_disputes": "",
-        "escalated": "",
-        "credit_reports": "",
-        "revenue_from_reports": ""
+        "total_groups": "Total des groupes",
+        "active_groups": "Actifs",
+        "total_members": "Total des membres", 
+        "across_groups": "Dans tous les groupes",
+        "platform_revenue": "Revenus de la plateforme",
+        "this_month": "ce mois",
+        "open_disputes": "Litiges ouverts",
+        "escalated": "escaladés",
+        "credit_reports": "Rapports de crédit vendus",
+        "revenue_from_reports": "revenus"
       },
       "tabs": {
-        "overview": "",
-        "groups": "", 
-        "disputes": ""
+        "overview": "Aperçu",
+        "groups": "Groupes", 
+        "disputes": "Litiges"
       },
       "alerts": {
-        "groups_attention": "",
-        "groups_attention_desc": "",
-        "disputes_resolve": "",
-        "disputes_resolve_desc": ""
+        "groups_attention": "Groupes nécessitant une attention particulière",
+        "groups_attention_desc": "2 avec un faible taux de recouvrement, 1 suspendue",
+        "disputes_resolve": "Litiges à résoudre",
+        "disputes_resolve_desc": "3 cas ont été signalés en urgence, 2 sont ouverts depuis plus de 48 heures."
       }
     },
     "groups": {
-      "title": "",
-      "subtitle": "",
-      "search_placeholder": "",
+      "title": "Gestion de groupe",
+      "subtitle": "Surveiller et gérer tous les groupes d'épargne",
+      "search_placeholder": "Rechercher des groupes...",
       "status": {
-        "active": "",
-        "suspended": "",
-        "pending": ""
+        "active": "Actif",
+        "suspended": "Suspendu",
+        "pending": "En attente"
       },
-      "actions": ""
+      "actions": "Actes"
     },
     "disputes": {
-      "title": "",
-      "subtitle": "",
+      "title": "Résolution des litiges",
+      "subtitle": "Examiner et résoudre les litiges entre membres",
       "priority": {
-        "high": "",
-        "medium": "", 
-        "low": ""
+        "high": "Haut",
+        "medium": "Moyen", 
+        "low": "Bas"
       },
       "status": {
-        "open": "",
-        "in_progress": "",
-        "resolved": "",
-        "escalated": ""
+        "open": "Ouvert",
+        "in_progress": "En cours",
+        "resolved": "Résolu",
+        "escalated": "Escaladé"
       }
     },
     "profits": {
